@@ -19,9 +19,9 @@ Food Name is a feature to allow users to search by the names of food such as App
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.  
-![1](./visual_design.png)
+![Food Name 1.png](Food%20Name%201.png)
 
-![2](./visual_design.png)
+![Food Name 2.png](Food%20Name%202.png)
 
 ---
 
@@ -35,9 +35,9 @@ Select Carbs/Fats or Vitamins is a drop down box that provides a drop down selec
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.  
-![1](./visual_design.png)
+![Filter 1.png](Filter%201.png)
 
-![2](./visual_design.png)
+![Filter 2.png](Filter%202.png)
 
 ---
 
@@ -51,9 +51,9 @@ Min is short for minimum value, which is in relation to the prior step of "Selec
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
-![1](./visual_design.png)
+![Min 1.png](Min%201.png)
 
-![2](./visual_design.png)
+![Min 2.png](Min%202.png)
 
 
 ---
@@ -68,14 +68,31 @@ Max is short for maximum value, which is in relation to the prior step of "Selec
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
-![1](./visual_design.png)
+![Max 1.png](Max%201.png)
 
-![2](./visual_design.png)
+![Max 2.png](Max%202.png)
 
 
 ---
 
-## 5. Search
+## 5. Sort Order
+### Description
+Sort order is a function allowing the user to sort by either a ascending or descending fashion.
+
+### Steps
+1. Click the drop down box next to Sort Order text
+2. Select either Ascending or Descending
+
+### Screenshots
+![Sort 1.png](Sort%201.png)
+
+![Sort 2.png](Sort%202.png)
+
+
+
+---
+
+## 6. Search
 ### Description  
 The search feature encompassses all four prior steps after completeing each step, the user can click the search button and all queries will be executed and the databse will show the information.
 
@@ -85,9 +102,10 @@ The search feature encompassses all four prior steps after completeing each step
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
-![1](./visual_design.png)
+![Search 1.png](Search%201.png)
 
-![2](./visual_design.png)
+![Search 2.png](Search%202.png)
 
+![Search 3.png](Search%203.png)
 
 ---
