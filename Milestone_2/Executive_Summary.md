@@ -31,7 +31,7 @@ Select Carbs/Fats or Vitamins is a drop down box that provides a drop down selec
 
 ### Steps
 1. Select the drop down box next to the text "Select Cabrs/Fats or Vitamins.
-2. Choose and option the shown.
+2. Choose one of the options the displayed in the list.
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.  
@@ -41,13 +41,13 @@ Include screenshots for each step demonstrating the use of this feature.
 
 ---
 
-## 3. [Feature 3 Name]
+## 3. Min
 ### Description  
-Briefly describe what this feature does.
+Min is short for minimum value, which is in relation to the prior step of "Select Carbs/Fats Or Vitamins". Min for example is the minimum number you want to query the database by such as Caloric Value.
 
 ### Steps
-1. Step-by-step instructions for using this feature.
-2. Add additional steps as needed.
+1. Click the textbox next to the word "Min"
+2. Type in  a minimum value you want to query the database by.
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
@@ -58,13 +58,13 @@ Include screenshots for each step demonstrating the use of this feature.
 
 ---
 
-## 4. [Feature 4 Name]
+## 4. Max
 ### Description  
-Briefly describe what this feature does.
+Max is short for maximum value, which is in relation to the prior step of "Select Carbs/Fats Or Vitamins". Max for example is the maximum number you want to query the database by such as Caloric Value.
 
 ### Steps
-1. Step-by-step instructions for using this feature.
-2. Add additional steps as needed.
+1. Click the textbox next to the word "Max"
+2. Type in a Maximum value you want to query the database by.
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
@@ -75,13 +75,13 @@ Include screenshots for each step demonstrating the use of this feature.
 
 ---
 
-## 5. [Feature 5 Name]
+## 5. Search
 ### Description  
-Briefly describe what this feature does.
+The search feature encompassses all four prior steps after completeing each step, the user can click the search button and all queries will be executed and the databse will show the information.
 
 ### Steps
-1. Step-by-step instructions for using this feature.
-2. Add additional steps as needed.
+1. Make sure you completed step 1 to 4
+2. Click the search button to display the query
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
