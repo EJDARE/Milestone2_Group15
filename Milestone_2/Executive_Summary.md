@@ -11,7 +11,7 @@ You should use your software to prepare an executive summary as outlined below f
 ### Description  
 The "Food Name" feature allows users to quickly search for specific food items by entering their name in a search field. This feature supports searching for various types of food, such as snacks, meals, beverages, and more. Users can enter full or partial names, and the system will display results matching their query, making it easier to find information or products related to specific food items (e.g., Apple Pastry, Cream Cheese, Meat Pie).
 
-This feature is useful for:
+**This feature is useful for:**
 
 1. Browsing through a large database of foods quickly.
 2. Finding specific nutritional information for a given food.
@@ -27,6 +27,11 @@ This feature is useful for:
 5. View the search results: The system will display a list of results matching your search query, including food items, related nutritional information, or available 
    products. You can then browse, select, or refine your search based on the results shown.
 
+**Additional Features**
+1. Auto-correction: If a food name is misspelled, the system may suggest the correct spelling or the closest match.
+2. Filter options: After viewing search results, users may have the option to apply filters such as categories (e.g., snacks, desserts), dietary preferences (e.g., gluten-free, vegan), or specific brands.
+3. History: Some versions of the system may save your recent searches for easy reference.
+
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.  
 ![Food Name 1.png](Food%20Name%201.png)
@@ -37,11 +42,27 @@ Include screenshots for each step demonstrating the use of this feature.
 
 ## 2. Select Carbs/Fats Or Vitamins
 ### Description  
-Select Carbs/Fats or Vitamins is a drop down box that provides a drop down selection menu allowing users to filter by Caloric Values. Fats, and Vitamins.
+The "Select Carbs/Fats or Vitamins" feature allows users to filter their search results based on specific nutritional categories. This dropdown menu includes options for Carbohydrates (Carbs), Fats, or Vitamins, enabling users to focus their search on food items with specific caloric or nutritional values.
+
+**This feature is particularly useful for users who want to:**
+
+1. Find foods based on macronutrient composition (e.g., high in fats or carbs).
+2. Search for food items rich in certain vitamins (e.g., Vitamin C, Vitamin D).
+3. Adjust their diet based on nutritional goals, such as lowering fat intake or increasing vitamin-rich food consumption.
 
 ### Steps
-1. Select the drop down box next to the text "Select Cabrs/Fats or Vitamins.
-2. Choose one of the options the displayed in the list.
+1. Locate the dropdown box: Find the dropdown box next to the label "Select Carbs/Fats or Vitamins" on the page.
+2. Click on the dropdown box: Clicking on the box will open a list of available filtering options.
+3. Choose an option: From the dropdown menu, select one of the following options:
+   1. Carbs: Filters the search results by food items high in carbohydrates.
+   2. Fats: Filters the search results to display foods high in fat content.
+   3. Vitamins: Displays food items rich in various vitamins.
+4. Apply the filter: Once an option is selected, the system will filter the available food items according to your selection, showing relevant results.
+
+**Additional Features**
+1. Dynamic Filtering: Once you select a filter option (Carbs, Fats, or Vitamins), the list of food items will update dynamically, allowing users to see the filtered results    immediately.
+2. Multi-filtering: Some implementations of this feature may allow multiple selections, such as filtering for both Carbs and Fats simultaneously.
+3. Nutritional Breakdown: After applying a filter, the system may also display a detailed nutritional breakdown of the food items that match your criteria.
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.  
