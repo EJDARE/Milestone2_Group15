@@ -106,11 +106,26 @@ Include screenshots for each step demonstrating the use of this feature.
 
 ## 4. Max
 ### Description  
-Max is short for maximum value, which is in relation to the prior step of "Select Carbs/Fats Or Vitamins". Max for example is the maximum number you want to query the database by such as Caloric Value.
+The "Max" field allows users to set a maximum threshold value for their search, which complements the prior selection made in the "Select Carbs/Fats or Vitamins" dropdown. This field specifies the upper limit of a nutritional component (e.g., carbohydrates, fats, or vitamins) or caloric value that the user is searching for. By entering a maximum value, the user can refine their search to include only food items that do not exceed the specified amount of the chosen nutrient or caloric content.
+
+This feature is helpful for users who are managing their diet, monitoring specific nutrient intake, or looking for food items within a defined caloric or nutrient range.
 
 ### Steps
-1. Click the textbox next to the word "Max"
-2. Type in a Maximum value you want to query the database by.
+1. Locate the "Max" text box: Find the text box labeled "Max" next to the dropdown for "Select Carbs/Fats or Vitamins."
+2. Enter a maximum value: Click inside the text box and type in the maximum value for the category you have selected. For example:
+   1. Carbs: Enter "50" to search for foods containing no more than 50 grams of carbohydrates.
+   2. Fats: Enter "30" to filter for foods with a maximum of 30 grams of fat.
+   3. Vitamins: Enter "500" to search for foods that contain no more than 500 mg of a specific vitamin.
+3. Submit or proceed with the search: After entering the maximum value, click the "Search" button (if available) or move to the next step if you are adding more criteria.
+
+**Example Scenarios**
+1. A user might want to find foods that are low in carbohydrates. In this case, they would select "Carbs" from the dropdown, enter "50" in the "Max" field, and the results     would only display foods with 50 grams or fewer carbohydrates.
+2. To limit fat intake, a user might enter "20" in the "Max" field for Fats, filtering out foods that exceed 20 grams of fat.
+
+**Additional Features**
+1. Min and Max Combination: This feature often works together with the "Min" field to allow users to define a range of values for more precise filtering. For example,          entering "10" in the "Min" field and "50" in the "Max" field would search for foods with between 10 and 50 grams of carbs.
+2. Validation: The system should validate the user input to ensure that the "Max" value is greater than the "Min" value, and that no invalid characters are entered.
+3. Dynamic Updates: Once the user enters the "Max" value, the search results could automatically update to reflect the refined search based on the new parameters.
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
