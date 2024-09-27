@@ -74,11 +74,26 @@ Include screenshots for each step demonstrating the use of this feature.
 
 ## 3. Min
 ### Description  
-Min is short for minimum value, which is in relation to the prior step of "Select Carbs/Fats Or Vitamins". Min for example is the minimum number you want to query the database by such as Caloric Value.
+The "Min" field allows users to set a minimum threshold value for their search, which relates to the previously selected category from the "Select Carbs/Fats or Vitamins" dropdown. For example, if the user selects "Carbs," the "Min" field specifies the minimum number of carbohydrates they want to query in the database. This feature is helpful for narrowing down search results to food items that meet a specific nutritional criterion, such as caloric value or nutrient content.
 
 ### Steps
-1. Click the textbox next to the word "Min"
-2. Type in  a minimum value you want to query the database by.
+1. Locate the "Min" text box: Find the text box labeled "Min" near the dropdown for "Select Carbs/Fats or Vitamins."
+
+2. Enter a minimum value: Click inside the text box and type the minimum value you'd like to query. This could be a caloric value, amount of carbohydrates, fats, or            vitamins. For example:
+
+   1. Carbs: Enter "10" to search for foods with at least 10 grams of carbohydrates.
+   2. Fats: Enter "5" to search for foods with a minimum of 5 grams of fat.
+   3. Vitamins: Enter "100" to search for foods with at least 100 mg of a specific vitamin.
+      
+3. Submit or proceed with the search: After entering the minimum value, either click the Search button (if available) or continue with the next filter/step if the system       supports further refinement.
+
+**Example Scenarios**
+1. If a user is looking for foods high in fats, they could select "Fats" from the dropdown and input "20" in the "Min" field. The search results will then show only foods      with 20 grams or more of fats.
+2. If searching for vitamin-rich foods, the user could select "Vitamins" from the dropdown, enter a specific value (e.g., "50" mg) in the "Min" field, and the system will      display foods with at least that amount of vitamins.
+
+**Additional Features**
+1. Error Handling: If a user enters an invalid value (e.g., negative numbers or non-numeric characters), the system may prompt the user to correct the input.
+2. Range Queries: In some systems, a "Max" field may also be available, allowing the user to specify both minimum and maximum values for a more precise search.
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
