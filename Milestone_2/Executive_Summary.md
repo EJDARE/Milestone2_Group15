@@ -9,13 +9,23 @@ You should use your software to prepare an executive summary as outlined below f
 
 ## 1. Food Name
 ### Description  
-Briefly describe what this feature does.
-Food Name is a feature to allow users to search by the names of food such as Apple Pasty, Cream Cheese, Meat Pie etc.
+The "Food Name" feature allows users to quickly search for specific food items by entering their name in a search field. This feature supports searching for various types of food, such as snacks, meals, beverages, and more. Users can enter full or partial names, and the system will display results matching their query, making it easier to find information or products related to specific food items (e.g., Apple Pastry, Cream Cheese, Meat Pie).
+
+This feature is useful for:
+
+1. Browsing through a large database of foods quickly.
+2. Finding specific nutritional information for a given food.
+3. Locating food products in online stores or restaurants.
 
 ### Steps
-1. Click the text box next to the words "Food Name"
-2. Type in the name of the food you want to search by.
-3. Click the Search icon
+1. Locate the search box: Find the text box next to the label "Food Name" at the top of the page or in the designated search section.
+   Input the food name: Type in the full name or part of the name of the food you want to search for. For example, if you're looking for "Apple Pastry," you can type either 
+   "Apple" or "Apple Pastry" to get relevant results.
+2. Auto-suggestions: As you type, a list of suggested food items may appear, allowing you to select from common or popular food options.
+3. Click the Search icon: Once you've entered the food name, click on the magnifying glass (Search icon) next to the text box to initiate the search. Alternatively, 
+   pressing the "Enter" key on your keyboard will also perform the search.
+4. View the search results: The system will display a list of results matching your search query, including food items, related nutritional information, or available 
+   products. You can then browse, select, or refine your search based on the results shown.
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.  
