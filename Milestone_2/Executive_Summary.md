@@ -12,7 +12,6 @@ You should use your software to prepare an executive summary as outlined below f
 The "Food Name" feature allows users to quickly search for specific food items by entering their name in a search field. This feature supports searching for various types of food, such as snacks, meals, beverages, and more. Users can enter full or partial names, and the system will display results matching their query, making it easier to find information or products related to specific food items (e.g., Apple Pastry, Cream Cheese, Meat Pie).
 
 **This feature is useful for:**
-
 1. Browsing through a large database of foods quickly.
 2. Finding specific nutritional information for a given food.
 3. Locating food products in online stores or restaurants.
@@ -45,7 +44,6 @@ Include screenshots for each step demonstrating the use of this feature.
 The "Select Carbs/Fats or Vitamins" feature allows users to filter their search results based on specific nutritional categories. This dropdown menu includes options for Carbohydrates (Carbs), Fats, or Vitamins, enabling users to focus their search on food items with specific caloric or nutritional values.
 
 **This feature is particularly useful for users who want to:**
-
 1. Find foods based on macronutrient composition (e.g., high in fats or carbs).
 2. Search for food items rich in certain vitamins (e.g., Vitamin C, Vitamin D).
 3. Adjust their diet based on nutritional goals, such as lowering fat intake or increasing vitamin-rich food consumption.
@@ -138,17 +136,33 @@ Include screenshots for each step demonstrating the use of this feature.
 
 ## 5. Sort Order
 ### Description
-Sort order is a function allowing the user to sort by either a ascending or descending fashion.
+The "Sort Order" feature allows users to organize their search results either in ascending or descending order, based on the selected nutritional category (e.g., Carbs, Fats, Vitamins, or Caloric Value). This function helps users quickly view food items in their preferred order, such as from lowest to highest carb content or from highest to lowest caloric value.
+
+**This feature is particularly useful for:**
+1. Users who want to find foods with the least or most of a specific nutrient.
+2. Easily comparing food items by ordering them in a logical sequence.
 
 ### Steps
-1. Click the drop down box next to Sort Order text
-2. Select either Ascending or Descending
+1. Locate the dropdown box: Find the dropdown menu next to the "Sort Order" label.
+2. Click on the dropdown box: Click the dropdown menu to reveal the sorting options.
+3. Select either Ascending or Descending:
+   1. Ascending (A to Z / Low to High): This option sorts the results in an upward order, showing the lowest values first (e.g., from the least carbs to the most carbs).
+   2. Descending (Z to A / High to Low): This option sorts the results in a downward order, showing the highest values first (e.g., from the highest calorie count to the          lowest).
+4. View sorted results: Once a sort order is selected, the search results will automatically rearrange themselves according to your preference, either showing the highest      values first (Descending) or the lowest values first (Ascending).
+
+**Example Use Case**
+1. If a user is searching for foods with fats, they may want to find the food with the least fat content first. In this case, they would select "Ascending" to display          results from the lowest to highest fat content.
+2. Conversely, a user looking for the most calorie-dense foods could select "Descending" to show the items with the highest caloric values first.
+
+**Additional Features**
+1. Default Sorting: The system may have a default sort order (usually ascending), which users can override by selecting their preferred option.
+2. Dynamic Sorting: Some systems automatically re-sort results in real-time as the user switches between ascending and descending options, providing immediate feedback.
+3. Multi-level Sorting: Advanced versions of this feature may allow users to sort by multiple criteria (e.g., sort by carbs first and then by vitamins) for more customized     searches.
 
 ### Screenshots
 ![Sort 1.png](Sort%201.png)
 
 ![Sort 2.png](Sort%202.png)
-
 
 
 ---
