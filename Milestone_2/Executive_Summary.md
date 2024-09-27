@@ -19,12 +19,12 @@ This feature is useful for:
 
 ### Steps
 1. Locate the search box: Find the text box next to the label "Food Name" at the top of the page or in the designated search section.
-   Input the food name: Type in the full name or part of the name of the food you want to search for. For example, if you're looking for "Apple Pastry," you can type either 
+2. Input the food name: Type in the full name or part of the name of the food you want to search for. For example, if you're looking for "Apple Pastry," you can type either 
    "Apple" or "Apple Pastry" to get relevant results.
-2. Auto-suggestions: As you type, a list of suggested food items may appear, allowing you to select from common or popular food options.
-3. Click the Search icon: Once you've entered the food name, click on the magnifying glass (Search icon) next to the text box to initiate the search. Alternatively, 
+3. Auto-suggestions: As you type, a list of suggested food items may appear, allowing you to select from common or popular food options.
+4. Click the Search icon: Once you've entered the food name, click on the magnifying glass (Search icon) next to the text box to initiate the search. Alternatively, 
    pressing the "Enter" key on your keyboard will also perform the search.
-4. View the search results: The system will display a list of results matching your search query, including food items, related nutritional information, or available 
+5. View the search results: The system will display a list of results matching your search query, including food items, related nutritional information, or available 
    products. You can then browse, select, or refine your search based on the results shown.
 
 ### Screenshots
