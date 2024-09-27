@@ -3,6 +3,7 @@
 Please provide your GitHub repository link.
 ### GitHub Repository URL: https://github.com/EJDARE/Milestone2_Group15.git
 
+
 ---
 
 You should use your software to prepare an executive summary as outlined below for the five required features.
@@ -37,6 +38,7 @@ Include screenshots for each step demonstrating the use of this feature.
 
 ![Food Name 2.png](Food%20Name%202.png)
 
+
 ---
 
 ## 2. Select Carbs/Fats Or Vitamins
@@ -67,6 +69,7 @@ Include screenshots for each step demonstrating the use of this feature.
 ![Filter 1.png](Filter%201.png)
 
 ![Filter 2.png](Filter%202.png)
+
 
 ---
 
@@ -169,11 +172,24 @@ The "Sort Order" feature allows users to organize their search results either in
 
 ## 6. Search
 ### Description  
-The search feature encompassses all four prior steps after completeing each step, the user can click the search button and all queries will be executed and the databse will show the information.
+The "Search" feature is the final step that executes all the previous selections and inputs (from steps 1 to 4). Once the user has specified their search criteria—such as selecting a nutritional category, entering minimum and maximum values, and choosing a sort order—they can click the "Search" button to initiate the query. The system will then process the inputs and return the filtered and sorted results from the database, showing the relevant food items that match the user’s specifications.
+
+This feature serves as the gateway to retrieving tailored results based on the user's preferences for Carbs, Fats, Vitamins, or other nutritional elements.
 
 ### Steps
-1. Make sure you completed step 1 to 4
-2. Click the search button to display the query
+1. Verify that steps 1 to 4 are complete:
+   1. Ensure that you have selected a nutritional category (Carbs, Fats, or Vitamins).
+   2. Specify a minimum and maximum value, if applicable.
+   3. Choose a sort order (Ascending or Descending) to organize the results.
+2. Click the "Search" button: Once all necessary fields are completed, locate and click the "Search" button to execute the query.
+3. View the results: The system will process the inputs and display the filtered and sorted results. The displayed items will meet the criteria based on the user’s input       (e.g., a list of foods high in fats sorted from lowest to highest fat content).
+
+**Example Scenario**
+If a user selects "Carbs" from the dropdown, enters a minimum value of "10" and a maximum value of "50," and chooses "Ascending" as the sort order, clicking the "Search" button will return a list of foods with carbohydrates between 10 and 50 grams, sorted from the lowest to highest amount of carbs.
+
+**Additional Features**
+1. Error Handling: If any required fields are missing (e.g., no "Min" or "Max" value is entered), the system may prompt the user to complete the necessary fields before        performing the search.
+2. Search Reset: After performing a search, the system may provide an option to reset the search fields, allowing users to start a new search with fresh criteria.
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
@@ -182,5 +198,6 @@ Include screenshots for each step demonstrating the use of this feature.
 ![Search 2.png](Search%202.png)
 
 ![Search 3.png](Search%203.png)
+
 
 ---
