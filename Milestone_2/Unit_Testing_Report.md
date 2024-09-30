@@ -13,11 +13,14 @@ the five required features.</span> There is no need to test the GUI components. 
 list all tested functions related to the five required features and the corresponding test functions designed to test 
 those functions, for example:
 
-| **Tested Functions** | **Test Functions**                               |
-|----------------------|--------------------------------------------------|
-| `add(x1,x2)`         | `test_add_valid()` <br> `test_add_invalid`       |
-| `divide(x1,x2)`      | `test_divide_valid()` <br> `test_divide_invalid` |
-| `...`                | `...`                                            |
+| **Tested Functions** | **Test Functions**                                             |
+|----------------------|----------------------------------------------------------------|
+| `add(x1,x2)`         | `test_add_valid()` <br> `test_add_invalid`                     |
+| `divide(x1,x2)`      | `test_divide_valid()` <br> `test_divide_invalid`               |
+| `multiply(a,b)`      | `test_multiply_valid()` <br> 'test_multiply_invalid()'         |
+| 'subtract(a,b)'      | 'test_subtract_valid()' <br> 'test_subtract_invalid()'         |
+| 'process_data(data)' | 'test_process_data_valid()' <br> 'test_process_data_invalid()' |
+
 
 ---
 
