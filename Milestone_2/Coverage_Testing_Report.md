@@ -17,7 +17,9 @@ list all tested functions related to the five required features, for example:
 |----------------------|
 | `add(x1,x2)`         | 
 | `divide(x1,x2)`      |
-| `...`                |
+| `multiply(a,b)`      |
+| `subtract(a,b)`      |
+| `process_data(data)` |
 
 ---
 
@@ -25,7 +27,15 @@ list all tested functions related to the five required features, for example:
 
 ### 2.1 Description
 
-Explain how you designed the test cases (i.e., test_all_functions.py) to reach 100% statement coverage.
+Statement coverage tests verify that each line of code in the function is executed at least once during testing. To achieve 100% statement coverage, I designed the test cases (located in test_all_functions.py) to ensure that every line of each function is executed.
+
+For example:
+
+- For the add and subtract functions, the tests include cases that cover both positive and negative numbers.
+- For the divide function, cases for valid inputs (e.g., divide by non-zero) and invalid inputs (e.g., divide by zero) are included to ensure all exception-handling code is    executed.
+- Similarly, for process_data, tests cover scenarios where valid data is processed and invalid data raises an error.
+
+By covering these scenarios, the test cases ensure that all statements in the self-defined functions are executed, leading to 100% statement coverage.
 
 ### 2.2 Testing Results
 You can use the following command to run the statement coverage test and generate the report in the terminal. Afterward, include a screenshot of the report. 
@@ -43,7 +53,14 @@ Note: In the command above, the file/module `all_functions` does not include the
 
 ### 3.1 Description
 
-Explain how you designed the test cases (i.e., test_all_functions.py) to reach 100% branch coverage.
+Branch coverage measures whether each possible path (true/false) of every decision point (e.g., if statements) in the code is executed. To achieve 100% branch coverage, the test cases in test_all_functions.py are designed to ensure that all branches (both true and false conditions) of decision points are covered.
+
+For example:
+
+- For the divide function, I included test cases for both valid divisions (e.g., divide(10, 2)) and invalid divisions (e.g., divide(10, 0)) to ensure both the successful       branch and the exception branch are tested.
+- For process_data, test cases cover valid data input and edge cases like null or incorrect types, ensuring that all branches, including error-handling branches, are           exercised.
+
+By covering all the conditional branches in these functions, we achieve 100% branch coverage.
 
 ### 3.2 Testing Results
 You can use the following command to run the branch coverage test and generate the report in the terminal. Afterward, include a screenshot of the report. 
