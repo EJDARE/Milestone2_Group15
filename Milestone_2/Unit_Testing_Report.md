@@ -26,14 +26,14 @@ those functions, for example:
 
 ## 2. **Test Case Details**
 
-### Test Case 1:
+### Test Case 1: Division Operation
 - **Test Function/Module**
   - `test_divide_valid()`
   - `test_divide_invalid()`
 - **Tested Function/Module**
   - `divide(a, b)`
 - **Description**
-  - A brief description of the tested function's usage, including its purpose, input, and output.
+  - The divide function performs division between two numbers. It takes two arguments (a and b), where a is divided by b. The function should handle exceptions,                 particularly division by zero.
 - **1) Valid Input and Expected Output**  
 
 | **Valid Input**               | **Expected Output** |
@@ -62,153 +62,147 @@ def test_divide_invalid():
         divide(10, 0)
     assert exc_info.type is ValueError
 ```
-### Test Case 2:
+### Test Case 2: Addition Operation
 - **Test Function/Module**
-  - `test_divide_valid()`
-  - `test_divide_invalid()`
+  - `test_add_valid()`
+  - `test_add_invalid()`
 - **Tested Function/Module**
-  - `divide(a, b)`
+  - `add(x1, x2)`
+- **Description**
+  - The add function performs the addition of two numbers. It accepts two parameters x1 and x2 and returns their sum.
+- **1) Valid Input and Expected Output**  
+
+| **Valid Input**               | **Expected Output** |
+|-------------------------------|---------------------|
+| `add(3, 2)`                   | `5`                 |
+| `add(-1, 1)`                  | `-5`                |
+| `add more cases in necessary` | `...`               |
+
+- **1) Code for the Test Function**
+```python
+def test_add_valid():
+    assert add(3, 2) == 5
+    assert add(-1, 1) == 0
+```
+- **2) Invalid Input and Expected Output**
+
+| **Invalid Input**             | **Expected Output** |
+|-------------------------------|---------------------|
+| `add(3, "two")`               | `Handle TypeError`  |
+| `add more cases in necessary` | `...`               |
+
+- **2) Code for the Test Function**
+```python
+def test_add_invalid():
+    with pytest.raises(TypeError):
+        add(3, "two")
+```
+
+### Test Case 3: Multiplication Operation
+- **Test Function/Module**
+  - `test_multiply_valid()`
+  - `test_multiply_invalid()`
+- **Tested Function/Module**
+  - `multiply(a, b)`
 - **Description**
   - A brief description of the tested function's usage, including its purpose, input, and output.
 - **1) Valid Input and Expected Output**  
 
 | **Valid Input**               | **Expected Output** |
 |-------------------------------|---------------------|
-| `divide(10, 2)`               | `5`                 |
-| `divide(10, -2)`              | `-5`                |
+| `multiply(2, 3)`              | `6`                 |
+| `multiply(-2, 3)`             | `-6`                |
 | `add more cases in necessary` | `...`               |
 
 - **1) Code for the Test Function**
 ```python
-def test_divide_valid():
-    assert divide(10, 2) == 5
-    assert divide(10, -2) == -5
+def test_multiply_valid():
+    assert multiply(2, 3) == 6
+    assert multiply(-2, 3) == -6
 ```
 - **2) Invalid Input and Expected Output**
 
 | **Invalid Input**             | **Expected Output** |
 |-------------------------------|---------------------|
-| `divide(10, 0)`               | `Handle Exception`  |
+| `multiply(2, None)`           | `Handle TypeError`  |
 | `add more cases in necessary` | `...`               |
 
 - **2) Code for the Test Function**
 ```python
-def test_divide_invalid():
-    with pytest.raises(ValueError) as exc_info:
-        divide(10, 0)
-    assert exc_info.type is ValueError
+def test_multiply_invalid():
+    with pytest.raises(TypeError):
+        multiply(2, None)
 ```
 
-### Test Case 3:
+### Test Case 4: Subtraction Operation
 - **Test Function/Module**
-  - `test_divide_valid()`
-  - `test_divide_invalid()`
+  - `test_subtract_valid()`
+  - `test_subtract_invalid()`
 - **Tested Function/Module**
-  - `divide(a, b)`
+  - `subtract(a, b)`
 - **Description**
-  - A brief description of the tested function's usage, including its purpose, input, and output.
+  - The subtract function returns the result of subtracting b from a.
 - **1) Valid Input and Expected Output**  
 
 | **Valid Input**               | **Expected Output** |
 |-------------------------------|---------------------|
-| `divide(10, 2)`               | `5`                 |
-| `divide(10, -2)`              | `-5`                |
+| `subtract(5, 3)`              | `2`                 |
+| `subtract(-2, -3)`            | `1`                 |
 | `add more cases in necessary` | `...`               |
 
 - **1) Code for the Test Function**
 ```python
-def test_divide_valid():
-    assert divide(10, 2) == 5
-    assert divide(10, -2) == -5
+def test_subtract_valid():
+    assert subtract(5, 3) == 2
+    assert subtract(-2, -3) == 1
 ```
 - **2) Invalid Input and Expected Output**
 
 | **Invalid Input**             | **Expected Output** |
 |-------------------------------|---------------------|
-| `divide(10, 0)`               | `Handle Exception`  |
+| `subtract(5, None)`           | `Handle TypeError`  |
 | `add more cases in necessary` | `...`               |
 
 - **2) Code for the Test Function**
 ```python
-def test_divide_invalid():
-    with pytest.raises(ValueError) as exc_info:
-        divide(10, 0)
-    assert exc_info.type is ValueError
+def test_subtract_invalid():
+    with pytest.raises(TypeError):
+        subtract(5, None)
 ```
 
-### Test Case 4:
+
+### Test Case 5: Data Processing Function
 - **Test Function/Module**
-  - `test_divide_valid()`
-  - `test_divide_invalid()`
+  - `test_process_data_valid()`
+  - `test_process_data_invalid()`
 - **Tested Function/Module**
-  - `divide(a, b)`
+  - `process_data(data)`
 - **Description**
-  - A brief description of the tested function's usage, including its purpose, input, and output.
+  - The process_data function performs operations on input data and returns processed results. It takes a dictionary as input and processes the values.
 - **1) Valid Input and Expected Output**  
 
-| **Valid Input**               | **Expected Output** |
-|-------------------------------|---------------------|
-| `divide(10, 2)`               | `5`                 |
-| `divide(10, -2)`              | `-5`                |
-| `add more cases in necessary` | `...`               |
+| **Valid Input**                  | **Expected Output** |
+|----------------------------------|---------------------|
+| `process_data({'a': 1, 'b': 2})` | `[1, 2]`            |
+| `add more cases in necessary`    | `...`               |
 
 - **1) Code for the Test Function**
 ```python
-def test_divide_valid():
-    assert divide(10, 2) == 5
-    assert divide(10, -2) == -5
+def test_process_data_valid():
+    assert process_data({'a': 1, 'b': 2}) == [1, 2]
 ```
 - **2) Invalid Input and Expected Output**
 
 | **Invalid Input**             | **Expected Output** |
 |-------------------------------|---------------------|
-| `divide(10, 0)`               | `Handle Exception`  |
+| `process_data(None)`          | `Handle ValueError` |
 | `add more cases in necessary` | `...`               |
 
 - **2) Code for the Test Function**
 ```python
-def test_divide_invalid():
-    with pytest.raises(ValueError) as exc_info:
-        divide(10, 0)
-    assert exc_info.type is ValueError
-```
-
-
-### Test Case 5:
-- **Test Function/Module**
-  - `test_divide_valid()`
-  - `test_divide_invalid()`
-- **Tested Function/Module**
-  - `divide(a, b)`
-- **Description**
-  - A brief description of the tested function's usage, including its purpose, input, and output.
-- **1) Valid Input and Expected Output**  
-
-| **Valid Input**               | **Expected Output** |
-|-------------------------------|---------------------|
-| `divide(10, 2)`               | `5`                 |
-| `divide(10, -2)`              | `-5`                |
-| `add more cases in necessary` | `...`               |
-
-- **1) Code for the Test Function**
-```python
-def test_divide_valid():
-    assert divide(10, 2) == 5
-    assert divide(10, -2) == -5
-```
-- **2) Invalid Input and Expected Output**
-
-| **Invalid Input**             | **Expected Output** |
-|-------------------------------|---------------------|
-| `divide(10, 0)`               | `Handle Exception`  |
-| `add more cases in necessary` | `...`               |
-
-- **2) Code for the Test Function**
-```python
-def test_divide_invalid():
-    with pytest.raises(ValueError) as exc_info:
-        divide(10, 0)
-    assert exc_info.type is ValueError
+def test_process_data_invalid():
+    with pytest.raises(ValueError):
+        process_data(None)
 ```
 
 ### Test Case 6:
