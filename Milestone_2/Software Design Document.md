@@ -123,7 +123,7 @@ Ensuring that both input and output mechanisms are intuitive and robust will enh
        - High: Greater than 66% of the highest value.     
  - Upload and Intergration:
    CSV File Upload: This option allows administrators to upload a CSV file containing nutritional data, which the system must parse and integrate into the database.
-   - Image Upload: Allows administrators to upload images to integrate into the correct food items.
+   ~~- Image Upload: Allows administrators to upload images to integrate into the correct food items.~~
 
 **Data Output**
  - Search Results:
@@ -135,9 +135,9 @@ Ensuring that both input and output mechanisms are intuitive and robust will enh
    - Comparison Tables: Allow users to compare nutritional values of multiple food items side by side.
    - Summary Statistics: Provide summary statistics or insights based on user queries, such as average calories, highest protein content, etc.
  - User Interface (UI):
-   - Interactive Elements: Input fields for searching, filtering, and uploading, as well as buttons for generating reports or viewing detailed comparisons.
- - Export Options:
-   Downloadable Reports: Users can export search results or comparison reports in formats like CSV, PDF, or Excel for offline analysis.
+   - Interactive Elements: Input fields for searching, filtering, and sorting (Ascending/Descending), as well as buttons for generating reports or viewing detailed comparisons.
+ ~~- Export Options:
+   Downloadable Reports: Users can export search results or comparison reports in formats like CSV, PDF, or Excel for offline analysis.~~
 
 #### 1.1.4 Target Users: Who will use the system, and why?
 The 'Nutritional Food Comparison' system is designed to cater to a range of users who have different needs related to dietary management, health, and nutrition. Below is a detailed breakdown of the projected Proto-Personas.
@@ -207,13 +207,14 @@ The 'Nutritional Food Comparison' system aims to cater to diverse users, includi
 
 ### 1.2 System capabilities/overview
 
-**System Functionality:** The 'Nutritional Food Comparison' desktop application is designed with a user-friendly interface to simplify the management and analysis of nutritional information. It addresses challenges like the complexity of data interpretation and the need for accessible visualisation. The system allows users to search for food items and analyse their nutritional content quickly. It also enables users to apply filters based on nutritional ranges and levels, tailoring search results to meet specific dietary needs, such as finding low-sodium or high-protein foods. Additionally, the system provides detailed nutritional breakdowns that are easy to understand, incorporating visual aids like pie charts and bar graphs. The application supports meal planning by allowing users to combine different foods and assess their nutritional values, helping them achieve dietary goals such as weight management or optimised nutrition for athletic performance.
+**System Functionality:** The 'Nutritional Food Comparison' desktop application is designed with a user-friendly interface to simplify the management and analysis of nutritional information. It addresses challenges like the complexity of data interpretation and the need for accessible visualisation. The system allows users to search for food items and analyse their nutritional content quickly. It also enables users to apply filters based on nutritional ranges and levels, tailoring search results to meet specific dietary needs, such as finding low- sodium or high-protein foods. Additionally, the system provides detailed nutritional breakdowns that are easy to understand, incorporating visual aids such as tables. The application supports meal planning by allowing users to combine different foods and assess their nutritional values, helping them achieve dietary goals such as weight management or optimised nutrition for athletic performance.
 
-**Features and Functionalities:** The 'Nutritional Food Comparison' system offers several key features to enhance the user's experience. The Food Search tools let users locate food items and quickly retrieve detailed nutritional data. Nutrition Range and Level Filters enable customised searches based on specific criteria, like calorie content or nutrient levels. The Meal Planner feature is a standout component, helping users create balanced meals by analysing the combined nutritional content of selected foods. The system allows the administration to use CSV and image uploads for data input, allowing easy integration of new informational data. On the output side, users can export their search results, nutritional breakdowns, and meal plans in various formats, such as CSV, PDF, or Excel, making offline analysis and sharing convenient. Designed for a wide range of users - from fitness enthusiasts to professional nutritionists - the system ensures personalised, informed decisions and dietary management, empowering users to take control of their health.
+
+**Features and Functionalities:** The 'Nutritional Food Comparison' system offers several key features to enhance the user's experience. The Food Search tools let users locate food items and quickly retrieve detailed nutritional data. Nutrition Range and Level Filters enable customised searches based on specific criteria, like calorie content or nutrient levels. The Meal Planner feature is a standout component, helping users create balanced meals by analysing the combined nutritional content of selected foods. Designed for a wide range of users - from fitness enthusiasts to professional nutritionists - the system ensures personalised, informed decisions and dietary management, empowering users to take control of their health. The system allows the administration to use CSV for data input, allowing easy integration of new informational data.
 
 ### 1.3	Benefit Analysis
 
-The 'Nutritional Food Comparison' system provides significant value by streamlining the complex process of nutritional data analysis and meal planning, making it more accessible and actionable for users. Intuitive tools like the Food Search, Nutrition Filters, and Meal Planner benefit users by saving time and reducing the effort required to make informed dietary choices. By offering personalized insights and visual representations of nutritional information, the system helps users meet their health goals, whether managing weight, optimizing athletic performance, or ensuring a balanced diet. The ability to easily compare foods, create customized meal plans, and export detailed reports empowers users to take control of their nutrition with confidence and precision. Additionally, the system's user-friendly interface and comprehensive data integration capabilities ensure that users of all backgrounds, from busy professionals to health-conscious parents, can efficiently achieve their dietary objectives.
+The 'Nutritional Food Comparison' system provides significant value by streamlining the complex process of nutritional data analysis and meal planning, making it more accessible and actionable for users. Intuitive tools like the Food Search, Nutrition Filters, and Meal Planner benefit users by saving time and reducing the effort required to make informed dietary choices. By offering personalized insights and visual representations of nutritional information, the system helps users meet their health goals, whether managing weight, optimizing athletic performance, or ensuring a balanced diet. The ability to easily compare foods, and create customized meal plans, empowers users to take control of their nutrition with confidence and precision. Additionally, the system's user-friendly interface and comprehensive data integration capabilities ensure that users of all backgrounds, from busy professionals to health-conscious parents, can efficiently achieve their dietary objectives.
 
 ## 2. Requirements
 
@@ -240,15 +241,15 @@ The 'Nutritional Food Comparison' system is designed with a diverse range of use
 
 **Detailed Nutritional Breakdown:**
 - Users need access to comprehensive nutritional information for each food item, presented in an easy-to-understand format.
-- Visual tools such as pie charts, bar graphs, and comparison tables should be available to help users interpret the data.
+- Visual tools such as comparison tables should be available to help users interpret the data.
 
 **Data Integration and Export:**
-- Users must be able to upload their data, such as CSV files with nutritional information, to customise the database.
-- The system should allow users to export their search results, nutritional breakdowns, and meal plans in multiple formats, such as CSV, PDF, or Excel, for offline analysis and sharing.
+- Admin must be able to upload their data, such as CSV files with nutritional information, to customise the database.
+~~- The system should allow users to export their search results, nutritional breakdowns, and meal plans in multiple formats, such as CSV, PDF, or Excel, for offline analysis and sharing.~~
 
 **Meal Planning Tools:**
 - The system must provide a Meal Planner feature that allows users to combine various foods and evaluate the overall nutritional content of the planned meal.
-- Users should be able to save and revisit their meal plans, adjusting them as needed to meet their goals.
+- Users can select and foods to add to their meal plans, adjusting them as needed to meet their goals.
 
 **User-Friendly Interface:**
 - The system must have an intuitive interface that allows users of varying technical skill levels to navigate and efficiently utilise all features.
@@ -261,29 +262,30 @@ The 'Nutritional Food Comparison' system is designed with a diverse range of use
   - R1.2) The system shall provide filters for users to narrow down search results based on nutritional ranges (e.g., calories, fats, proteins).
   - R1.3) The system shall enable users to apply nutritional level filters (low, medium, high) for specific nutrients such as sodium, sugar, and cholesterol.
   - R1.4) The system shall display a list of food items that match the search criteria, including relevant nutritional information.
+  - R1.5) The system shall allow users to sort food items in ascending or descending order, and the search will match filtered items.
 
 ---
 
 - **R2.0 Nutritional Data Presentation:**
   - R2.1) The system shall provide a detailed nutritional breakdown for each food item, including metrics such as caloric value, fats, carbohydrates, proteins, vitamins, and minerals.
   - R2.2) The system shall present nutritional data in tables to compare multiple food items easily.
-  - R2.3) To aid data interpretation, The system shall include visual representations of nutritional data, such as pie charts, bar graphs, and line graphs.
+  - R2.3) To aid data interpretation, the system shall include visual representations of nutritional data, such as comparison tables.
   - R2.4) The system shall allow users to compare the nutritional values of multiple food items side by side.
 
 ---
  
 - **R3.0 Meal Planning:**
-  - R3.1) The system shall provide a Meal Planner feature that allows users to create and save meal plans by selecting multiple food items.
+  - R3.1) The system shall provide a Meal Planner feature that allows users to create meal plans by selecting multiple food items.
   - R3.2) The system shall calculate and display the total nutritional content of the selected foods within a meal plan.
-  - R3.3) The system shall enable users to modify meal plans by adding or removing food items and automatically updating the nutritional content.
+  - R3.3) The system shall enable users to modify meal plans by adding or removing food items, updating the nutritional content.
 
 ---
 
 - **R4.0 Data Integration and Export:**
   - R4.1) The system shall allow administrators to upload CSV files containing nutritional data, which will be parsed and integrated into the system's database.
-  - R4.2) The system shall allow administrators to upload images associated with specific food items.
-  - R4.3) The system shall enable users to export search results, nutritional breakdowns, and meal plans in multiple formats, including CSV, PDF, and Excel.
-  - R4.4) The system shall allow users to download detailed reports of their meal plans and food comparisons.
+  ~~- R4.2) The system shall allow administrators to upload images associated with specific food items.~~
+  ~~- R4.3) The system shall enable users to export search results, nutritional breakdowns, and meal plans in multiple formats, including CSV, PDF, and Excel.~~
+  ~~- R4.4) The system shall allow users to download detailed reports of their meal plans and food comparisons.~~
 
 ---
 
@@ -291,14 +293,14 @@ The 'Nutritional Food Comparison' system is designed with a diverse range of use
   - R5.1) The system shall provide an intuitive user interface that supports easy navigation and use of all features.
   - R5.2) The system shall include interactive elements like buttons, dropdown menus, and input fields to facilitate user interaction.
   - R5.3) The system shall offer real-time feedback and updates as users search for foods, apply filters, or create meal plans.
-  - R5.4) The system shall allow users to save their settings and preferences for a personalised experience.
+ ~~- R5.4) The system shall allow users to save their settings and preferences for a personalised experience.~~
 
 ---
 
-- **R6.0 Security and User Management:**
-  - R6.1) The system shall require user authentication (e.g., login credentials) to access personalised meal plans and saved settings.
-  - R6.2) The system shall ensure that valid data (e.g., CSV files) is uploaded for accuracy and completeness before integration.
-  - R6.3) The system shall provide role-based access controls, allowing administrators to manage data and user permissions.
+~~- **R6.0 Security and User Management:**~~
+ ~~- R6.1) The system shall require user authentication (e.g., login credentials) to access personalised meal plans and saved settings.~~
+ ~~- R6.2) The system shall ensure that valid data (e.g., CSV files) is uploaded for accuracy and completeness before integration.~~
+ ~~- R6.3) The system shall provide role-based access controls, allowing administrators to manage data and user permissions.~~
 
 These requirements define the essential functionalities of the 'Nutritional Food Comparison' system, ensuring a comprehensive and user-friendly experience for all intended users.
 
