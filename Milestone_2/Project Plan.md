@@ -1,4 +1,4 @@
-[Food_Nutrition_Dataset.csv](https://github.com/user-attachments/files/17199473/Food_Nutrition_Dataset.csv)# Project Plan
+# Project Plan
 
 ## Project Name: Nutritional Food Comparison
 ## Group Number: 015
