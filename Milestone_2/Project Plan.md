@@ -140,7 +140,7 @@ This dataset will be cleaned, validated, and integrated into the desktop applica
 
 Given the project’s scope and timeline, the following risks have been identified, along with mitigation strategies:
 
-| **Risk                     |	Impact |	Likelihood |	Mitigation Strategy**                                        |
+| Risk                       |	Impact |	Likelihood |	Mitigation Strategy                                          |
 |----------------------------|---------|-------------|---------------------------------------------------------------|
 | Data Accuracy              |	High   |	Moderate   |	Perform data validation and cleaning before use.             |
 | Feature Creep              |	Medium |	High       |	Stick to the defined scope and reject out-of-scope requests. |
