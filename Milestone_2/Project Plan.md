@@ -97,5 +97,5 @@ Out of Scope:
 
 ## 4. Gantt Chart
 
-![Gantt Chart.png](Gantt%20Chart.png)
+![Gantt Chart.png](Milestone1/Gantt Chart.png)
 
