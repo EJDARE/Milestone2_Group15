@@ -1,49 +1,34 @@
 # Software Design Document
 
-## Project Name: Nutritional Food Comparison
-## Group Number: 015
+## Project Name: Data Analysis and Visualisation 
+**Group Number:** 015
 
-## Team members
-
-| Student No. | Full Name         |
-|-------------|-------------------|
-| s5387195    | Ethan Davis       |
+## Team Members
+| Student No. | Full Name       |
+|-------------|------------------|
+| s5387195    | Ethan Davis      |
 | s5347877    | Tristan Martins   |
-| s5294045    | Ethan Baker       |
+| s5294045    | Ethan Baker      |
 
-
-<div style="page-break-after: always;"></div>
-
-
-
-# Table of Contents
-
-<!-- TOC -->
-* [Table of Contents](#table-of-contents)
-  * [1. System Vision](#1-system-vision)
-    * [1.1 Problem Background](#11-problem-background)
-    * [1.2 System capabilities/overview](#12-system-capabilitiesoverview)
-    * [1.3	Potential Benefits](#13potential-benefits)
-  * [2. Requirements](#2-requirements)
-    * [2.1 User Requirements](#21-user-requirements)
-    * [2.2	Software Requirements](#22software-requirements)
-    * [2.3 Use Case Diagrams](#23-use-case-diagrams)
-    * [2.4 Use Cases](#24-use-cases)
-  * [3.	Software Design and System Components](#3-software-design-and-system-components-)
-    * [3.1	Software Design](#31software-design)
-    * [3.2	System Components](#32system-components)
-      * [3.2.1 Functions](#321-functions)
-      * [3.2.2 Data Structures / Data Sources](#322-data-structures--data-sources)
-      * [3.2.3 Detailed Design](#323-detailed-design)
-  * [4. User Interface Design](#4-user-interface-design)
-    * [4.1 Structural Design](#41-structural-design)
-    * [4.2	Visual Design](#42visual-design)
-<!-- TOC -->
-
-
-<div style="page-break-after: always;"></div>
-
-
+## Table of Contents
+1. [System Vision](#system-vision)
+   - [Problem Background](#problem-background)
+   - [System capabilities/overview](#system-capabilitiesoverview)
+   - [Potential Benefits](#potential-benefits)
+2. [Requirements](#requirements)
+   - [User Requirements](#user-requirements)
+   - [Software Requirements](#software-requirements)
+   - [Use Case Diagrams](#use-case-diagrams)
+   - [Use Cases](#use-cases)
+3. [Software Design and System Components](#software-design-and-system-components)
+   - [Software Design](#software-design)
+   - [System Components](#system-components)
+     - [Functions](#functions)
+     - [Data Structures / Data Sources](#data-structures--data-sources)
+     - [Detailed Design](#detailed-design)
+4. [User Interface Design](#user-interface-design)
+   - [Structural Design](#structural-design)
+   - [Visual Design](#visual-design)
 
 ## 1. System Vision
 
@@ -52,717 +37,532 @@
 #### 1.1.1 Problem Identification: What problem does this system solve?
 
 The 'Nutritional Food Comparison' system, including its features like Food Search, Nutrition Breakdown, Nutrition Range Filter, Nutrition Level Filter, and the additional Meal Planner feature, aims to solve the following problems:
-
-- **1) Complexity in Nutritional Data Analysis:** Nutritional information can be overwhelming and difficult to interpret manually. The system simplifies this process by providing tools that enable users to search for foods, analyse their nutritional content, and create personalised labels.
-
-- **2) Inaccessible Visualisation:** The system makes nutritional data more accessible by incorporating simple visual elements like pie charts, bar graphs, and detailed nutritional breakdowns.
-
-- **3) Efficient Decision-Making:** Tools such as the system's filtering and range selection allow users to quickly make informed food choices based on nutritional content and dietary requirements. 
-
-- 4) Personalised Meal Planning: The Meal Planner feature, a unique and valuable component of the 'Nutritional Food Comparison' system, encourages users to create balanced meals by combining foods and analysing their nutritional value. This aids in achieving dietary goals such as weight management or nutrient intake optimisation. 
-
-- **5) Time and Effort Reduction:** The system automates analysing and comparing nutritional data, reducing the time and effort required to plan meals and make healthy food choices.
-
-
+1. **Complexity in Nutritional Data Analysis:** Nutritional information can be overwhelming and difficult to interpret manually. The system simplifies this process by providing tools that enable users to search for foods, analyze their nutritional content, and create personalized labels.
+2. **Inaccessible Visualization:** The system makes nutritional data more accessible by incorporating simple visual elements like pie charts, bar graphs, and detailed nutritional breakdowns.
+3. **Efficient Decision-Making:** Tools such as the system's filtering and range selection allow users to quickly make informed food choices based on nutritional content and dietary requirements.
+4. **Personalized Meal Planning:** The Meal Planner feature, a unique and valuable component of the 'Nutritional Food Comparison' system, encourages users to create balanced meals by combining foods and analyzing their nutritional value. This aids in achieving dietary goals such as weight management or nutrient intake optimization.
+5. **Time and Effort Reduction:** The system automates analyzing and comparing nutritional data, reducing the time and effort required to plan meals and make healthy food choices.
 
 #### 1.1.2 Dataset: What is the dataset used?
-  
-The Nutritional Food Database provides a comprehensive dataset showing detailed nutritional information for various food items. Each food item in the dataset is analyzed based on various nutritional parameters, making it a valuable resource for dietary and health inquiries.
 
-The Column descriptions that are used in the dataset are listed below:
-| Dataset                               | Description                                                                                                  |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| Food                                  | The name or type of the food item.                                                                           |
-| Caloric Value (in kcal)               | Total energy provided by the food, typically measured in kilocalories per 100 grams.                         |
-| Fat (in g)                            | Total amount of fats in grams per 100 grams, including the breakdowns that follow.                           |
-| Saturated Fats (in g)                 | Amount of saturated fats (which can raise cholesterol levels) in grams per 100 grams.                        |
-| Monounsaturated Fats (in g)           | Amount of monounsaturated fats (considered heart-healthy fats) in grams per 100 grams.                       |
-| Polyunsaturated Fats (in g)           | Amount of polyunsaturated fats (essential fats needed by the body) in grams per 100 grams.                   |
-| Carbohydrates (in g)                  | Total carbohydrates in grams per 100 grams, including sugars.                                                |
-| Sugars (in g)                         | Total sugars in grams per 100 grams, a subset of carbohydrates.                                              |
-| Protein (in g)                        | Total proteins in grams per 100 grams, essential for body repair and growth.                                 |
-| Dietary Fiber (in g)                  | Fiber content in grams per 100 grams, important for digestive health.                                        |
-| Cholesterol (in mg)                   | Cholesterol content in milligrams per 100 grams, pertinent for cardiovascular health.                        |
-| Sodium (in g)                         | Sodium content in milligrams per 100 grams, crucial for fluid balance and nerve function.                    |
-| Water (in g)                          | Water content in grams per 100 grams, which affects the food’s energy density.                               |
-| Vitamin A (in µg)                     | Amount of Vitamin A in micrograms per 100 grams, important for vision and immune functioning.                |
-| Vitamin B1 (Thiamine) (in mg)         | Essential for glucose metabolism.                                                                            |
-| Vitamin B11 (Folic Acid) (in mg)      | Crucial for cell function and tissue growth, particularly important in pregnancy.                            |
-| Vitamin B12 (in µg)                   | Important for brain function and blood formation.                                                            |
-| Vitamin B2 (Riboflavin) (in mg)       | Necessary for energy production, cell function, and fat metabolism.                                          |
-| Vitamin B3 (Niacin) (in mg)           | Supports digestive system, skin, and nerve health.                                                           |
-| Vitamin B5 (Pantothenic Acid) (in mg) | Necessary for making blood cells and helps convert food into energy.                                         |
-| Vitamin B6 (in mg)                    | Important for normal brain development and maintaining the nervous and immune systems.                       |
-| Vitamin C (in mg)                     | Important for the repair of all body tissues.                                                                |
-| Vitamin D (in µg)                     | Crucial for the absorption of calcium, promoting bone growth and health.                                     |
-| Vitamin E (in mg)                     | Acts as an antioxidant, helping to protect cells from damage caused by free radicals.                        |
-| Vitamin K (in µg)                     | Necessary for blood clotting and bone health.                                                                |
-| Calcium (in mg)                       | Vital for building and maintaining strong bones and teeth.                                                   |
-| Copper (in mg)                        | Helps with the formation of collagen, increases iron absorption, and plays a role in energy production.      |
-| Iron (in mg)                          | Essential for the creation of red blood cells.                                                               |
-| Magnesium (in mg)                     | Important for regulating muscle and nerve function, blood sugar levels, and blood pressure.                  |
-| Manganese (in mg)                     | Involved in bone formation, blood clotting, and metabolism of fats and carbohydrates.                        |
-| Phosphorus (in mg)                    | Helps with the formation of bones and teeth and is necessary for cell growth and repair.                     |
-| Potassium (in mg)                     | Helps regulate fluid balance, muscle contractions, and nerve signals.                                        |
-| Selenium (in µg)                      | Important for reproduction, thyroid function, DNA production, and protecting the body from free radicals.    |
-| Zinc (in mg)                          | Necessary for immune function, cell division, growth, wound healing, and carbohydrate breakdown.             |
-| Nutrition Density                     | A metric indicating the nutrient richness of the food per calorie.                                           |
+The Nutritional Food Database provides a comprehensive dataset showing detailed nutritional information for various food items. Each food item in the dataset is analyzed based on various nutritional parameters, making it a valuable resource for dietary and health inquiries. The column descriptions that are used in the dataset are listed below:
+
+| Dataset                                       | Description                                                                                          |
+|-----------------------------------------------|------------------------------------------------------------------------------------------------------|
+| Food                                          | The name or type of the food item.                                                                  |
+| Caloric Value (in kcal)                      | Total energy provided by the food, typically measured in kilocalories per 100 grams.                |
+| Fat (in g)                                   | Total amount of fats in grams per 100 grams, including the breakdowns that follow.                  |
+| Saturated Fats (in g)                        | Amount of saturated fats (which can raise cholesterol levels) in grams per 100 grams.               |
+| Monounsaturated Fats (in g)                  | Amount of monounsaturated fats (considered heart-healthy fats) in grams per 100 grams.              |
+| Polyunsaturated Fats (in g)                  | Amount of polyunsaturated fats (essential fats needed by the body) in grams per 100 grams.          |
+| Carbohydrates (in g)                         | Total carbohydrates in grams per 100 grams, including sugars.                                       |
+| Sugars (in g)                                | Total sugars in grams per 100 grams, a subset of carbohydrates.                                     |
+| Protein (in g)                               | Total proteins in grams per 100 grams, essential for body repair and growth.                        |
+| Dietary Fiber (in g)                          | Fiber content in grams per 100 grams, important for digestive health.                               |
+| Cholesterol (in mg)                          | Cholesterol content in milligrams per 100 grams, pertinent for cardiovascular health.               |
+| Sodium (in g)                                 | Sodium content in milligrams per 100 grams, crucial for fluid balance and nerve function.           |
+| Water (in g)                                  | Water content in grams per 100 grams, which affects the food’s energy density.                     |
+| Vitamin A (in µg)                            | Amount of Vitamin A in micrograms per 100 grams, important for vision and immune functioning.      |
+| Vitamin B1 (Thiamine) (in mg)                | Essential for glucose metabolism.                                                                    |
+| Vitamin B11 (Folic Acid) (in mg)             | Crucial for cell function and tissue growth, particularly important in pregnancy.                    |
+| Vitamin B12 (in µg)                           | Important for brain function and blood formation.                                                    |
+| Vitamin B2 (Riboflavin) (in mg)              | Necessary for energy production, cell function, and fat metabolism.                                  |
+| Vitamin B3 (Niacin) (in mg)                  | Supports digestive system, skin, and nerve health.                                                  |
+| Vitamin B5 (Pantothenic Acid) (in mg)        | Necessary for making blood cells and helps convert food into energy.                                 |
+| Vitamin B6 (in mg)                           | Important for normal brain development and maintaining the nervous and immune systems.               |
+| Vitamin C (in mg)                            | Important for the repair of all body tissues.                                                       |
+| Vitamin D (in µg)                            | Crucial for the absorption of calcium, promoting bone growth and health.                             |
+| Vitamin E (in mg)                            | Acts as an antioxidant, helping to protect cells from damage caused by free radicals.                |
+| Vitamin K (in µg)                            | Necessary for blood clotting and bone health.                                                       |
+| Calcium (in mg)                              | Vital for building and maintaining strong bones and teeth.                                          |
+| Copper (in mg)                               | Helps with the formation of collagen, increases iron absorption, and plays a role in energy production.|
+| Iron (in mg)                                 | Essential for the creation of red blood cells.                                                     |
+| Magnesium (in mg)                            | Important for regulating muscle and nerve function, blood sugar levels, and blood pressure.          |
+| Manganese (in mg)                            | Involved in bone formation, blood clotting, and metabolism of fats and carbohydrates.               |
+| Phosphorus (in mg)                           | Helps with the formation of bones and teeth and is necessary for cell growth and repair.            |
+| Potassium (in mg)                            | Helps regulate fluid balance, muscle contractions, and nerve signals.                                |
+| Selenium (in µg)                             | Important for reproduction, thyroid function, DNA production, and protecting the body from free radicals.|
+| Zinc (in mg)                                 | Necessary for immune function, cell division, growth, wound healing, and carbohydrate breakdown.      |
+| Nutrition Density                             | A metric indicating the nutrient richness of the food per calorie.                                   |
 
 #### 1.1.3 Data Input/Output: What kind of data input and output is required?
 
 Ensuring that both input and output mechanisms are intuitive and robust will enhance the user experience and accuracy of the 'Nutritional Food Comparison' project. The data input and output requirements are essential for the functionality and usability of the application. Below is a detailed breakdown:
 
 **Data Input**
- - User Input for Food Search:
-   Search Queries: This is text-based input where users can search for food items by name. This might include partial names or exact matches.
-   - Filters: Criteria for filtering data, such as:
-     Nutritional Langes: Users can select one of the nutrition and input minimum and maximum values, and the tool will display a list of foods that fall within those ranges.
-     Nutritional Levels: Users can filter foods by their nutritional content levels—low, mid, and high—including fat, protein, carbohydrates, sugar, and nutritional density.
-       - Low: Less than 33% of the highest value.
-       - Mid: Between 33% and 66% of the highest value.
-       - High: Greater than 66% of the highest value.     
- - Upload and Intergration:
-   CSV File Upload: This option allows administrators to upload a CSV file containing nutritional data, which the system must parse and integrate into the database.
-   ~~- Image Upload: Allows administrators to upload images to integrate into the correct food items.~~
+- **User Input for Food Search:**
+  - **Search Queries:** This is text-based input where users can search for food items by name. This might include partial names or exact matches.
+  - **Filters:** Criteria for filtering data, such as:
+    - **Nutritional Ranges:** Users can select one of the nutrition and input minimum and maximum values, and the tool will display a list of foods that fall within those ranges.
+    - **Nutritional Levels:** Users can filter foods by their nutritional content levels—low, mid, and high—including fat, protein, carbohydrates, sugar, and nutritional density.
+      - **Low:** Less than 33% of the highest value.
+      - **Mid:** Between 33% and 66% of the highest value.
+      - **High:** Greater than 66% of the highest value.
+  - **Upload and Integration:**
+    - **CSV File Upload:** This option allows administrators to upload a CSV file containing nutritional data, which the system must parse and integrate into the database.
 
 **Data Output**
- - Search Results:
-   - List of Food Items: Display search results based on the user's query, including relevant nutritional information.
-   Detailed Information: Provide detailed nutritional data for each food item, such as calories, fat content, vitamins, etc.
- - Nutritional Breakdown:
-   - Tables: Detailed tables showing the nutritional breakdown of selected food items.
-   - Graphs and Charts: Visual representations like bar charts. Pie charts or line graphs to illustrate comparisons between different foods or nutrient levels.
-   - Comparison Tables: Allow users to compare nutritional values of multiple food items side by side.
-   - Summary Statistics: Provide summary statistics or insights based on user queries, such as average calories, highest protein content, etc.
- - User Interface (UI):
-   - Interactive Elements: Input fields for searching, filtering, and sorting (Ascending/Descending), as well as buttons for generating reports or viewing detailed comparisons.
- ~~- Export Options:
-   Downloadable Reports: Users can export search results or comparison reports in formats like CSV, PDF, or Excel for offline analysis.~~
-
-#### 1.1.4 Target Users: Who will use the system, and why?
-The 'Nutritional Food Comparison' system is designed to cater to a range of users who have different needs related to dietary management, health, and nutrition. Below is a detailed breakdown of the projected Proto-Personas.
-
-| **Proto Persona 1**                                                             |
-|---------------------------------------------------------------------------------|
-| Fitness Enthusiast "Alex"                                                       |
-| **Age:** 28                                                                     |
-| **Goal:** Balanced meal planning                                                |
-| **User Needs:** Quick access to nutritional data for planning meals             |
-
----
-
-| **Proto Persona 2**                                                             |
-|---------------------------------------------------------------------------------|
-| Professional Nutritionist "Dr. Emma"                                            |
-| **Age:** 45                                                                     |
-| **Goal:** Personalized client meal plans                                        |
-| **User Needs:** Detailed nutritional info and tools for creating meal plans     |
-
----
-
-| **Proto Persona 3**                                                             |
-|---------------------------------------------------------------------------------|
-| Health-Conscious Parent "Sarah"                                                 |
-| **Age:** 35                                                                     |
-| **Goal:** Planning meals for family                                             |
-| **User Needs:** Focus on Vegan options for family meals                         |
-
----
-
-| **Proto Persona 4**                                                             |
-|---------------------------------------------------------------------------------|
-| Elderly Individual "John"                                                       |
-| **Age:** 70                                                                     |
-| **Goal:** Maintain a balanced diet for healthy aging                            |
-| **User Needs:** Low-sodium/sugar and heart-healthy meal options                 |
-
----
-
-| **Proto Persona 5**                                                             |
-|---------------------------------------------------------------------------------|
-| College Student "Emily"                                                         |
-| **Age:** 21                                                                     |
-| **Goal:** Affordable and nutritious meals                                       |
-| **User Needs:** Quick and easy meal planning with budget-friendly ingredients   |
-
----
-
-| **Proto Persona 6**                                                             |
-|---------------------------------------------------------------------------------|
-| Busy Professional "David"                                                       |
-| **Age:** 34                                                                     |
-| **Goal:** Efficient meal planning amidst a busy schedule                        |
-| **User Needs:** Quick, grab-and-go meal options with high nutritional value     |
-
----
-
-| **Proto Persona 7**                                                             |
-|---------------------------------------------------------------------------------|
-| Young Athlete "Mia"                                                             |
-| **Age:** 18                                                                     |
-| **Goal:** Optimized nutrition for peak athletic performance                     |
-| **User Needs:** High-protein and energy-rich meal options                       |
-
-The 'Nutritional Food Comparison' system aims to cater to diverse users, including fitness enthusiasts, health-conscious parents, professional nutritionists, food manufacturers, elderly individuals, busy professionals, young athletes and the general populous. These users share a common need for reliable and accessible nutritional information to support their unique health and dietary goals. The system provides personalized tools and resources for meal planning, nutritional analysis, and decision-making, empowering users to make informed choices that align with their lifestyles and dietary requirements. Whether seeking to maintain a balanced diet, optimize athletic performance, or ensure product compliance, the system offers tailored solutions to these diverse needs.
+- **Search Results:**
+  - **List of Food Items:** Display search results based on the user's query, including relevant nutritional information.
+  - **Detailed Information:** Provide detailed nutritional data for each food item, such as calories, fat content, vitamins, etc.
+- **Nutritional Breakdown:**
+  - **Tables:** Detailed tables showing the nutritional breakdown of selected food items.
+  - **Graphs and Charts:** Visual representations like bar charts, pie charts, or line graphs to illustrate comparisons between different foods or nutrient levels.
+  - **Comparison Tables:** Allow users to compare nutritional values of multiple food items side by side.
+  - **Summary Statistics:** Provide summary statistics or insights based on user queries, such as average calories, highest protein content, etc.
+- **User Interface (UI):**
+  - **Interactive Grid:** Users can interact with a grid of food items, where clicking on an item will open a new window with more information.
+  - **Meal Planner Output:** Based on user-selected food items, provide a summary of selected meals, total nutritional values, and options for saving or printing meal plans.
 
 ### 1.2 System capabilities/overview
 
-**System Functionality:** The 'Nutritional Food Comparison' desktop application is designed with a user-friendly interface to simplify the management and analysis of nutritional information. It addresses challenges like the complexity of data interpretation and the need for accessible visualisation. The system allows users to search for food items and analyse their nutritional content quickly. It also enables users to apply filters based on nutritional ranges and levels, tailoring search results to meet specific dietary needs, such as finding low- sodium or high-protein foods. Additionally, the system provides detailed nutritional breakdowns that are easy to understand, incorporating visual aids such as tables. The application supports meal planning by allowing users to combine different foods and assess their nutritional values, helping them achieve dietary goals such as weight management or optimised nutrition for athletic performance.
+The 'Nutritional Food Comparison' system is designed to facilitate users' understanding of food nutrition, enabling them to make informed dietary choices. It is an interactive tool that offers a range of capabilities:
 
+1. **Food Search Functionality:** Users can search for food items by name, ingredient, or type.
+2. **Nutritional Analysis:** Provides detailed nutritional breakdowns for each food item, including calories, fats, proteins, carbohydrates, vitamins, and minerals.
+3. **Filtering Mechanism:** Users can filter food items based on nutritional values, allowing them to find options that fit their dietary preferences or restrictions.
+4. **Data Visualization:** Generates visual representations of nutritional data, including charts and graphs, to help users easily comprehend comparisons between different food items.
+5. **Meal Planning Tool:** A unique feature that allows users to combine food items and plan meals while analyzing their nutritional content.
+6. **CSV File Import:** Enables administrators to add or update food data in bulk, ensuring the database is always current.
 
-**Features and Functionalities:** The 'Nutritional Food Comparison' system offers several key features to enhance the user's experience. The Food Search tools let users locate food items and quickly retrieve detailed nutritional data. Nutrition Range and Level Filters enable customised searches based on specific criteria, like calorie content or nutrient levels. The Meal Planner feature is a standout component, helping users create balanced meals by analysing the combined nutritional content of selected foods. Designed for a wide range of users - from fitness enthusiasts to professional nutritionists - the system ensures personalised, informed decisions and dietary management, empowering users to take control of their health. The system allows the administration to use CSV for data input, allowing easy integration of new informational data.
+### 1.3 Potential Benefits
 
-### 1.3	Benefit Analysis
+The system aims to offer several benefits to its users:
 
-The 'Nutritional Food Comparison' system provides significant value by streamlining the complex process of nutritional data analysis and meal planning, making it more accessible and actionable for users. Intuitive tools like the Food Search, Nutrition Filters, and Meal Planner benefit users by saving time and reducing the effort required to make informed dietary choices. By offering personalized insights and visual representations of nutritional information, the system helps users meet their health goals, whether managing weight, optimizing athletic performance, or ensuring a balanced diet. The ability to easily compare foods, and create customized meal plans, empowers users to take control of their nutrition with confidence and precision. Additionally, the system's user-friendly interface and comprehensive data integration capabilities ensure that users of all backgrounds, from busy professionals to health-conscious parents, can efficiently achieve their dietary objectives.
+1. **Improved Dietary Choices:** Users can make more informed decisions about their food intake, leading to healthier eating habits.
+2. **Enhanced Nutritional Awareness:** By visualizing nutritional data, users gain a better understanding of the nutritional profiles of various foods.
+3. **Personalized Nutrition Planning:** The Meal Planner feature empowers users to customize their meals according to their dietary needs, goals, and preferences.
+4. **Time Efficiency:** The system streamlines the process of searching for and comparing food options, saving users time and effort.
+5. **Increased Accessibility:** With an easy-to-use interface and visual data presentation, the system makes nutritional information accessible to a broader audience, including those with limited dietary knowledge.
 
 ## 2. Requirements
 
 ### 2.1 User Requirements
+The primary user requirements for the 'Nutritional Food Comparison' system are as follows:
 
-The 'Nutritional Food Comparison' system is designed with a diverse range of users in mind, including fitness enthusiasts, nutritionists, busy professionals, and health-conscious individuals. These users are expected to interact with the program to achieve their dietary and nutritional goals efficiently. The system must provide the following functionalities from the end-user perspective:
+1. **User-Friendly Interface:** The system must have an intuitive design that makes it easy for users to navigate and find information.
+2. **Search Functionality:** Users should be able to search for food items using a search bar and receive relevant results quickly.
+3. **Nutritional Information Display:** Users must have access to detailed nutritional information for each food item, including calories, fat content, vitamins, and minerals.
+4. **Filtering Options:** Users should be able to filter food items based on various nutritional parameters (e.g., low-fat, high-protein).
+5. **Data Visualization Tools:** The system should provide visual representations of data (charts and graphs) to enhance understanding and comparison.
+6. **Meal Planning Feature:** Users must be able to select food items, view their combined nutritional value, and save or print meal plans.
+7. **Data Import Capability:** Admins should be able to upload and integrate CSV files to update the nutritional database.
 
-**Narrative Descriptions**
+### 2.2 Software Requirements
+The software requirements for the system include:
 
-**1) Fitness Enthusiast "Alex":** Alex, a 28-year-old fitness enthusiast, uses the system to plan meals that support his workout routines. He needs quick access to nutritional data to ensure his meals are balanced and aligned with his fitness goals. Alex frequently searches for high-protein foods, filters results based on specific nutrient levels and uses the Meal Planner to create meals that optimise his performance and recovery.
+1. **Front-End Framework:** The application will use a front-end framework such as React or Angular for building the user interface.
+2. **Back-End Framework:** The back-end will be developed using a framework like Node.js or Django to handle API requests and data processing.
+3. **Database Management:** A database system (e.g., MongoDB, PostgreSQL) will be used to store and manage food item data and user interactions.
+4. **Data Visualization Library:** Libraries like Chart.js or D3.js will be integrated for creating visualizations.
+5. **CSV Parsing Library:** A library for handling CSV file uploads and parsing (e.g., csv-parser for Node.js).
+6. **Development Tools:** Development tools such as Visual Studio Code, Git for version control, and Postman for API testing.
 
----
-
-**2) Nutritionist "Dr Emma":** Dr Emma, a 45-year-old professional nutritionist, relies on the system to develop personalised meal plans for her clients. She needs detailed nutritional information and the ability to compare various food items to meet her clients' dietary needs. The system's export feature allows her to generate reports that can be shared with her clients, ensuring they have clear guidelines to follow.
-
----
-
-**3) Busy Professional "David":** David, a 34-year-old professional, interacts with the system to quickly plan nutritious meals that fit his hectic schedule. He uses the system's filters to find grab-and-go meal options that are high in nutrients and low in unhealthy fats. The ability to save and export meal plans allows him to stay organised and maintain a balanced diet despite his busy lifestyle.
-
-**Search and Filter Functionality:**
-- Users need the ability to search for specific food items using text-based queries.
-- The system must provide filters for nutritional content, allowing users to search based on calories, protein, fats, vitamins, and other nutrients.
-- Filters should include ranges (e.g., low, medium, high) to help users find foods that match their dietary requirements.
-
-**Detailed Nutritional Breakdown:**
-- Users need access to comprehensive nutritional information for each food item, presented in an easy-to-understand format.
-- Visual tools such as comparison tables should be available to help users interpret the data.
-
-**Data Integration and Export:**
-- Admin must be able to upload their data, such as CSV files with nutritional information, to customise the database.
-~~- The system should allow users to export their search results, nutritional breakdowns, and meal plans in multiple formats, such as CSV, PDF, or Excel, for offline analysis and sharing.~~
-
-**Meal Planning Tools:**
-- The system must provide a Meal Planner feature that allows users to combine various foods and evaluate the overall nutritional content of the planned meal.
-- Users can select and foods to add to their meal plans, adjusting them as needed to meet their goals.
-
-**User-Friendly Interface:**
-- The system must have an intuitive interface that allows users of varying technical skill levels to navigate and efficiently utilise all features.
-- Interactive elements, such as clickable buttons and easy-to-use filters, should enhance the user experience and efficiency.
-
-### 2.2	Software Requirements
-
-- **R1.0 Food Search and Filtering:**
-  - R1.1) The system shall allow users to search for food items using a text-based query.
-  - R1.2) The system shall provide filters for users to narrow down search results based on nutritional ranges (e.g., calories, fats, proteins).
-  - R1.3) The system shall enable users to apply nutritional level filters (low, medium, high) for specific nutrients such as sodium, sugar, and cholesterol.
-  - R1.4) The system shall display a list of food items that match the search criteria, including relevant nutritional information.
-  - R1.5) The system shall allow users to sort food items in ascending or descending order, and the search will match filtered items.
-
----
-
-- **R2.0 Nutritional Data Presentation:**
-  - R2.1) The system shall provide a detailed nutritional breakdown for each food item, including metrics such as caloric value, fats, carbohydrates, proteins, vitamins, and minerals.
-  - R2.2) The system shall present nutritional data in tables to compare multiple food items easily.
-  - R2.3) To aid data interpretation, the system shall include visual representations of nutritional data, such as comparison tables.
-  - R2.4) The system shall allow users to compare the nutritional values of multiple food items side by side.
-
----
- 
-- **R3.0 Meal Planning:**
-  - R3.1) The system shall provide a Meal Planner feature that allows users to create meal plans by selecting multiple food items.
-  - R3.2) The system shall calculate and display the total nutritional content of the selected foods within a meal plan.
-  - R3.3) The system shall enable users to modify meal plans by adding or removing food items, updating the nutritional content.
-
----
-
-- **R4.0 Data Integration and Export:**
-  - R4.1) The system shall allow administrators to upload CSV files containing nutritional data, which will be parsed and integrated into the system's database.
-  ~~- R4.2) The system shall allow administrators to upload images associated with specific food items.~~
-  ~~- R4.3) The system shall enable users to export search results, nutritional breakdowns, and meal plans in multiple formats, including CSV, PDF, and Excel.~~
-  ~~- R4.4) The system shall allow users to download detailed reports of their meal plans and food comparisons.~~
-
----
-
-- **R5.0 User Interface (UI) and Interaction:**
-  - R5.1) The system shall provide an intuitive user interface that supports easy navigation and use of all features.
-  - R5.2) The system shall include interactive elements like buttons, dropdown menus, and input fields to facilitate user interaction.
-  - R5.3) The system shall offer real-time feedback and updates as users search for foods, apply filters, or create meal plans.
- ~~- R5.4) The system shall allow users to save their settings and preferences for a personalised experience.~~
-
----
-
-~~- **R6.0 Security and User Management:**~~
- ~~- R6.1) The system shall require user authentication (e.g., login credentials) to access personalised meal plans and saved settings.~~
- ~~- R6.2) The system shall ensure that valid data (e.g., CSV files) is uploaded for accuracy and completeness before integration.~~
- ~~- R6.3) The system shall provide role-based access controls, allowing administrators to manage data and user permissions.~~
-
-These requirements define the essential functionalities of the 'Nutritional Food Comparison' system, ensuring a comprehensive and user-friendly experience for all intended users.
-
-### 2.3 Use Case Diagram
- 
-![System Use Case Diagram](./UC-05.png)
+### 2.3 Use Case Diagrams
+Use Case diagrams are graphical representations of the interactions between users (actors) and the system. Below is an overview of the Use Case Diagram for the 'Nutritional Food Comparison' system. (Insert diagram here)
 
 ### 2.4 Use Cases
+1. **Search Food Items**
+   - **Actor:** User
+   - **Description:** Users search for food items by entering a text-based query.
+   - **Flow of Events:**
+     1. User enters a food name into the search bar.
+     2. The system retrieves and displays matching food items.
+     3. The user selects a food item to view detailed nutritional information.
+   - **Alternate Flow:** If no matching items are found, the system displays a "No results found" message.
 
----
+2. **Filter Food Items**
+   - **Actor:** User
+   - **Description:** Users filter food items based on specified nutritional criteria.
+   - **Flow of Events:**
+     1. User selects filter criteria (e.g., low-fat).
+     2. The system updates the displayed food items based on the selected filters.
+     3. The user can select food items from the filtered list to view details.
 
-| Use Case ID    | UC-01 |
-|----------------|-------|
-| Use Case Name  | Nutritional Database |
-| Actors         | Administrator |
-| Description    | The administrator uploads nutritional data via CSV files and integrates it into the system's database. |
-| Flow of Events | 1) The administrator selects uploading a CSV file. 2) The system prompts the administrator to select a file from the local system. 3) The system validates and parses the data, integrating it into the database. 4) The administrator receives confirmation of a successful upload.|
-| Alternate Flow | If the CSV file contains errors, the system prompts the administrator to correct and re-upload the file. |
+3. **View Nutritional Breakdown**
+   - **Actor:** User
+   - **Description:** Users view detailed nutritional information for a selected food item.
+   - **Flow of Events:**
+     1. User selects a food item from the search results.
+     2. The system displays detailed nutritional data, including calorie breakdown, vitamins, and minerals.
 
-![UC-01, Nutritional Database](./UC-01.png)
+4. **Create Meal Plan**
+   - **Actor:** User
+   - **Description:** Users combine food items to create a personalized meal plan.
+   - **Flow of Events:**
+     1. User selects multiple food items from the search results.
+     2. The system calculates and displays the combined nutritional values of the selected items.
+     3. User can save or print the meal plan for future reference.
 
----
+5. **Upload Nutritional Data**
+   - **Actor:** Admin
+   - **Description:** Admins upload a CSV file to update the nutritional database.
+   - **Flow of Events:**
+     1. Admin selects a CSV file from their device.
+     2. The system parses the file and updates the database with the new food items.
+     3. The system displays a confirmation message upon successful upload.
 
-| Use Case ID    | UC-02 |
-|----------------|-------|
-| Use Case Name  | Search Filters |
-| Actors         | User |
-| Description    |The user applies filters to narrow down food search results based on specific nutritional criteria. |
-| Flow of Events | 1) The user selects a mineral filter option (e.g., calories, protein, fat). 2) The user sets a range or level (low, medium, high) for the selected nutrient. 3) The system filters and displays the food items that meet the criteria. |
-| Alternate Flow | The user can view the nutritional breakdown in different formats (e.g., pie chart, bar graph).|
+## 3. Software Design and System Components
 
-![UC-02, Search Filter](./UC-02.png)
+### 3.1 Software Design
 
----
+#### Software Design Flowchart
+(Include a flowchart illustrating the software design process here)
 
-| Use Case ID    | UC-03 |
-|----------------|-------|
-| Use Case Name  | Nutritional Breakdown |
-| Actors         | User |
-| Description    |The user views a detailed report of nutritional information for selected food items. |
-| Flow of Events | 1) The user selects a food item from the search results. 2) The system displays a detailed nutritional breakdown in tabular and graphical formats. 3) The user can compare the breakdown with other food items. |
-| Alternate Flow | The user can view the nutritional breakdown in different formats (e.g., pie chart, bar graph). |
-
-![UC-03, Nutritional Breakdown](./UC-03.png)
-
----
-
-| Use Case ID    | UC-04 |
-|----------------|-------|
-| Use Case Name  | Account Management |
-| Actors         | User |
-| Description    | Users can manage accounts, including registration, login, and account updates. |
-| Flow of Events | Create Account: 1) The user selects "Register" and provides required details like email and password. 2) The system stores the user's details in the user database and sends a verification email. Verification: 1) The user clicks on the verification link sent via email. 2) The system verifies the account and activates it. Account Login: 1) The user enters their email and password on the login page. 2) The system authenticates the user and grants access to the account. |
-| Alternate Flow | Reset (Passowrd: 1) The user selects "Forgot Password" and enters their registered email. 2) The system sends a password reset link. 3) The user resets the password via the link, and the system updates the user database. |
-
-![UC-01, Account Management](./UC-04.png)
-
-## 3.	Software Design and System Components 
-
-### 3.1	Software Design
-
-![Software Design Flowchart](./Flowchart.png)
-
-### 3.2	System Components
+### 3.2 System Components
 
 #### 3.2.1 Functions
 
-**Start Program:** The software starts, prompting users to log in or register.
+**Start Program:**  
+When the application starts, users can immediately begin interacting with its features without needing login or registration, allowing direct access to all functionalities.
 
-- **Login:** Users enter credentials, which are validated. If incorrect, the user is prompted to re-enter the data.
-- Register: Users create an account, verify via email, and log in.
+**Dashboard:**  
+Users are taken to the main dashboard, where they can navigate to key functions:
+- **Food Search:** Users enter a search query to find food items, and the app displays detailed nutritional information for each item from the database.
+- **Apply Filters:** Users can filter food items based on nutritional ranges (e.g., calories, protein, fat). Filtered results are displayed dynamically, and users can adjust the filters as needed.
+- **Meal Planner:** Users can add food items to a meal plan, and the app calculates the total nutritional values for the meal, helping users see how their choices fit into their dietary needs.
 
-**Dashboard:** Once logged in, users can select from key functionalities:
-- **Food Search:** Users enter a food search query, and the system displays the nutritional details for each item.
-- **Apply Filters:** Users can filter food items based on nutritional ranges (e.g., calories, protein, fat). Filtered results are displayed, and the user can adjust filters as needed.
-- **Meal Planner:** Users add food items to a meal plan, and the system calculates the total nutritional value of the meal.
+**Admin Import Functionality:**  
+Administrators can upload new nutritional datasets through CSV files. These datasets are imported into the app’s database, ensuring the latest food data is available.
 
-**Exporting and Saving:** Users can export their search results, filtered items, or meal plans as CSV, PDF, or Excel files for offline use.
+**End Program:**  
+Once users have completed their tasks, they can close the app without needing to log out, streamlining the user experience.
 
-**End Program:** After completing tasks, the user logs out or closes the software, ending the session.
+---
 
 #### 3.2.2 Data Structures / Data Sources
 
-#### 3.2.2.1 Food Database
+##### 3.2.2.1 Food Database
 
-**Type**: **Dictionary** (or Database Table)  
-**Usage**: Stores detailed nutritional information for each food item, where each food item is a key, and its corresponding nutritional data (calories, fats, proteins, etc.) is the value.
-
-**Functions**:
-- `search_food(query)`: Searches the food database for food items matching the search query.
-- `get_nutritional_data(food_item)`: Retrieves the detailed nutritional breakdown of a specific food item.
-
----
-
-#### 3.2.2.2 User Accounts
-
-**Type**: **Dictionary** (or Database Table)  
-**Usage**: Stores user account information, such as email, hashed passwords, and preferences. Each user is identified by a key (user ID or email), and their details are stored as values.
-
-**Functions**:
-- `register_user(user_data)`: Registers a new user and stores their information.
-- `login_user(email, password)`: Authenticates the user by verifying their email and password.
-- `update_user_account(user_id, new_data)`: Updates the user’s account details (e.g., email, password).
-- `reset_password(email)`: Sends a password reset link to the user's email for password recovery.
-
----
-
-#### 3.2.2.3 Meal Plan
-
-**Type**: **List** (of dictionaries)  
-**Usage**: Stores a list of food items selected by the user for a meal plan. Each food item is represented as a dictionary containing nutritional information.
-
-**Functions**:
-- `add_to_meal_plan(food_item)`: Adds a food item to the current meal plan.
-- `calculate_meal_plan_nutrition(meal_plan)`: Calculates the total nutritional value (calories, proteins, etc.) of all food items in the meal plan.
-- `remove_from_meal_plan(food_item)`: Removes a selected food item from the meal plan.
-- `save_meal_plan(user_id, meal_plan)`: Saves the current meal plan for the user.
-
----
-
-#### 3.2.2.4 Search Results
-
-**Type**: **List** (of dictionaries)  
-**Usage**: Temporarily stores search results after the user enters a query. Each result is a dictionary containing the food item and its basic nutritional information.
-
-**Functions**:
-- `sort_results(criteria)`: Sorts search results by selected criteria (e.g., calories, protein).
-- `apply_filters(filters)`: Applies nutritional filters (e.g., calories range, low fat) to narrow down search results.
-
----
-
-#### 3.2.2.5 Nutritional Filters
-
-**Type**: **Dictionary**  
-**Usage**: Stores the filters applied to search results. The dictionary keys represent the nutrient type (e.g., calories, protein), and the values represent the range or level.
-
-**Functions**:
-- `apply_filters(filters, search_results)`: Filters the food items in the search results based on the selected ranges provided in the filter dictionary.
-- `clear_filters()`: Resets the filters to display all food items again.
-
----
-
-#### 3.2.2.6 Nutritional Breakdown
-
-**Type**: **Dictionary**  
-**Usage**: Stores detailed nutritional information for a selected food item. The dictionary contains key-value pairs representing nutrients (e.g., calories, fats) and their corresponding amounts.
-
-**Functions**:
-- `get_nutritional_data(food_item)`: Fetches detailed nutritional data for a food item.
-- `compare_foods(food_items)`: Compares the nutritional breakdown of multiple food items.
-
----
-
-#### 3.2.2.7 CSV Data Source
-
-**Type**: **CSV File (External Source)**  
-**Usage**: Administrators upload CSV files containing nutritional data to be integrated into the system.
-
-**Functions**:
-- `upload_csv(file)`: Allows administrators to upload and import CSV files with nutritional data.
-- `parse_csv(file)`: Parses the uploaded CSV file and integrates it into the food database.
-- `validate_csv(file)`: Ensures that the CSV data is valid (correct format, complete data) before processing.
-
----
-
-#### 3.2.2.8 User Preferences
-
-**Type**: **Dictionary**  
-**Usage**: Stores individual user preferences such as dietary restrictions, preferred units of measurement, and previously saved meal plans.
-
-**Functions**:
-- `save_user_preferences(user_id, preferences)`: Saves the user's preferences to their account.
-- `load_user_preferences(user_id)`: Loads the user's saved preferences during login or session start.
-
----
-
-#### 3.2.2.9 Export Data
-
-**Type**: **Dictionary** (formatted for export)  
-**Usage**: Temporarily stores data such as search results, nutritional comparisons, or meal plans for export. The data is structured for conversion into various file formats (CSV, PDF, Excel).
-
-**Functions**:
-- `export_to_csv(data)`: Converts the stored data into a CSV file.
-- `export_to_pdf(data)`: Converts the stored data into a PDF report.
-- `export_to_excel(data)`: Converts the stored data into an Excel file.
-
----
-
-#### 3.2.2.10 Session Data
-
-**Type**: **Dictionary**  
-**Usage**: Temporarily stores session-specific information, such as the current user's ID, active meal plans, and applied filters. This data is used during the user’s active session.
-
-**Functions**:
-- `start_session(user_id)`: Initializes a session for the user, storing their ID and session-specific data.
-- `end_session()`: Clears all session data when the user logs out or the session ends.
-
-#### 3.2.3 Detailed Design
-
----
-
-#### 3.2.3.1 Start Program
-**Pseudocode**:
-```
-function start_program():
-    display("Welcome to the Nutrition App")
-    display("1. Login")
-    display("2. Register")
-    user_choice = get_user_input()
-    
-    if user_choice == "1":
-        login()
-    elif user_choice == "2":
-        register()
+- **Type:** Dictionary (or Database Table)
+- **Usage:** Stores detailed nutritional information for each food item, with each food item as a key and its corresponding nutritional data (calories, fats, proteins, etc.) as the value.
+- **Functions:**
+  - **Search Function:** Searches the food database for items matching the search query.
+    ```python
+    filtered_data = self.dataset[self.dataset['food'].str.lower().str.contains(food_name, na=False)]
+    ```
+  - **Sort Order:** Sorts food items based on selected criteria (e.g., ascending or descending by nutrient).
+    ```python
+    sort_order = self.m_choice_sort.GetStringSelection()
+    if sort_order == "Ascending":
+        filtered_data = filtered_data.sort_values(by=selected_vitamin)
     else:
-        display("Invalid choice, please try again")
-        start_program()
-```
+        filtered_data = filtered_data.sort_values(by=selected_vitamin, ascending=False)
+    ```
+  - **Level Filter:** Filters food items based on nutrient levels (e.g., Low, Medium, High).
+    ```python
+    highest_value = filtered_data[selected_vitamin].max() if not filtered_data.empty else 0
+    low_threshold = highest_value * 0.33
+    high_threshold = highest_value * 0.66
 
----
+    if level_filter == "Low":
+        filtered_data = filtered_data[filtered_data[selected_vitamin] < low_threshold]
+    elif level_filter == "Medium":
+        filtered_data = filtered_data[(filtered_data[selected_vitamin] >= low_threshold) & (filtered_data[selected_vitamin] <= high_threshold)]
+    elif level_filter == "High":
+        filtered_data = filtered_data[filtered_data[selected_vitamin] > high_threshold]
+    ```
+  - **Populate Grid:** Displays the filtered food items in the grid.
+    ```python
+    def populate_grid(self, filtered_data):
+        self.m_grid2.ClearGrid()
 
-#### 3.2.3.2 Login
-**Pseudocode**:
-```
-function login():
-    email = get_user_input("Enter email: ")
-    password = get_user_input("Enter password: ")
-    
-    if authenticate_user(email, password):
-        dashboard()
-    else:
-        display("Invalid credentials, please try again")
-        login()
-```
+        num_rows = len(filtered_data)
+        num_cols = len(filtered_data.columns)
 
----
+        if num_rows > self.m_grid2.GetNumberRows():
+            self.m_grid2.AppendRows(num_rows - self.m_grid2.GetNumberRows())
+        elif num_rows < self.m_grid2.GetNumberRows():
+            self.m_grid2.DeleteRows(num_rows, self.m_grid2.GetNumberRows() - num_rows)
 
-#### 3.2.3.3 Register
-**Pseudocode**:
-```
-function register():
-    email = get_user_input("Enter email: ")
-    password = get_user_input("Enter password: ")
-    
-    if email_already_registered(email):
-        display("Email already in use, please log in or use a different email")
-        start_program()
-    else:
-        save_user(email, hash_password(password))
-        send_verification_email(email)
-        display("A verification email has been sent. Please verify to log in.")
-        login()
-```
+        if num_cols > self.m_grid2.GetNumberCols():
+            self.m_grid2.AppendCols(num_cols - self.m_grid2.GetNumberCols())
+        elif num_cols < self.m_grid2.GetNumberCols():
+            self.m_grid2.DeleteCols(num_cols, self.m_grid2.GetNumberCols() - num_cols)
 
----
+        for col_idx, col_name in enumerate(filtered_data.columns):
+            self.m_grid2.SetColLabelValue(col_idx, col_name)
 
-#### 3.2.3.4 Dashboard
-**Pseudocode**:
-```
-function dashboard():
-    display("Welcome to the Dashboard")
-    display("1. Food Search")
-    display("2. Apply Filters")
-    display("3. Meal Planner")
-    display("4. Export Data")
-    display("5. Logout")
-    
-    user_choice = get_user_input()
-    
-    if user_choice == "1":
-        food_search()
-    elif user_choice == "2":
-        apply_filters()
-    elif user_choice == "3":
-        meal_planner()
-    elif user_choice == "4":
-        export_data()
-    elif user_choice == "5":
-        end_program()
-    else:
-        display("Invalid choice, please try again")
-        dashboard()
-```
+        for row_idx, row_data in enumerate(filtered_data.iterrows()):
+            for col_idx, value in enumerate(row_data[1]):
+                self.m_grid2.SetCellValue(row_idx, col_idx, str(value))
 
----
+        self.m_grid2.Fit()
+        self.Layout()
+    ```
+  - **On Row Click:** Adds a food item to the current meal plan when the user clicks on a row in the grid.
+    ```python
+    def on_row_click(self, event):
+        row_index = event.GetRow()
 
-#### 3.2.3.5 Food Search
-**Pseudocode**:
-```
-function food_search():
-    query = get_user_input("Enter food name or keyword: ")
-    results = search_food(query)
-    
-    if results:
-        display_food_results(results)
-    else:
-        display("No results found. Try again.")
-        food_search()
-    
-    dashboard()
-```
+        food_data = [self.m_grid2.GetCellValue(row_index, col_index) for col_index in range(self.m_grid2.GetNumberCols())]
 
----
+        col_labels = [self.m_grid2.GetColLabelValue(col_index) for col_index in range(self.m_grid2.GetNumberCols())]
 
-#### 3.2.3.6 Apply Filters
-**Pseudocode**:
-```
-function apply_filters():
-    display("Filter by:")
-    display("1. Calories")
-    display("2. Protein")
-    display("3. Fats")
-    
-    filter_choice = get_user_input()
-    range_min = get_user_input("Enter minimum value: ")
-    range_max = get_user_input("Enter maximum value: ")
-    
-    filters = set_filter(filter_choice, range_min, range_max)
-    filtered_results = apply_filters(filters, search_results)
-    
-    if filtered_results:
-        display_food_results(filtered_results)
-    else:
-        display("No results found within filter range")
-    
-    dashboard()
-```
-
----
-
-#### 3.2.3.7 Meal Planner
-**Pseudocode**:
-```
-function meal_planner():
-    display("Add food items to your meal plan")
-    while True:
-        food_item = get_user_input("Enter food name to add (or type 'done' to finish): ")
-        
-        if food_item == "done":
-            break
-        
-        item_data = get_nutritional_data(food_item)
-        if item_data:
-            add_to_meal_plan(item_data)
-            display(f"{food_item} added to meal plan")
+        if hasattr(self, 'open_window') and self.open_window is not None:
+            self.open_window.append_row(food_data)
         else:
-            display("Food item not found. Try again.")
-    
-    total_nutrition = calculate_meal_plan_nutrition(meal_plan)
-    display("Total Nutrition for Meal Plan:", total_nutrition)
-    
-    dashboard()
-```
+            self.open_window = FoodDetails(self, col_labels)
+            self.open_window.append_row(food_data)
+            self.open_window.Show()
+    ```
 
----
+##### 3.2.2.2 Meal Plan
 
-#### 3.2.3.8 Exporting & Saving
-**Pseudocode**:
-```
-function export_data():
-    display("Choose export format:")
-    display("1. CSV")
-    display("2. PDF")
-    display("3. Excel")
-    
-    format_choice = get_user_input()
-    
-    if format_choice == "1":
-        export_to_csv(data)
-    elif format_choice == "2":
-        export_to_pdf(data)
-    elif format_choice == "3":
-        export_to_excel(data)
+- **Type:** List (of dictionaries)
+- **Usage:** Stores a list of food items selected by the user for a meal plan. Each food item is represented as a dictionary containing nutritional information.
+- **Functions:**
+  - **Add to Meal Plan:** Adds a food item to the current meal plan.
+    ```python
+    self.append_row(food_data)
+    ```
+  - **Remove from Meal Plan:** Removes a selected food item from the meal plan when the user clicks on the row.
+    ```python
+    self.on_row_click(event)
+    ```
+  - **Calculate Total Nutritional Value:** Calculates the total nutritional value (calories, proteins, etc.) of all food items in the meal plan.
+    ```python
+    def update_totals(self):
+        num_rows = self.grid.GetNumberRows() - 1
+        num_cols = self.grid.GetNumberCols()
+
+        totals = [0.0] * num_cols
+
+        for row in range(1, num_rows + 1):
+            for col in range(1, num_cols):
+                try:
+                    value = float(self.grid.GetCellValue(row, col))
+                    totals[col] += value
+                except ValueError:
+                    pass
+
+        for col in range(1, num_cols):
+            self.grid.SetCellValue(self.total_row_index, col, str(round(totals[col], 3)))
+
+        for col in range(num_cols):
+            self.grid.SetReadOnly(self.total_row_index, col, True)
+    ```
+
+##### 3.2.2.3 Search Results
+
+- **Type:** List (of dictionaries)
+- **Usage:** Temporarily stores search results after the user enters a query. Each result is a dictionary containing the food item and its basic nutritional information.
+- **Functions:**
+  - **Sort Order:** Sorts food items based on selected criteria (e.g., ascending or descending by nutrient).
+    ```python
+    sort_order = self.m_choice_sort.GetStringSelection()
+    if sort_order == "Ascending":
+        filtered_data = filtered_data.sort_values(by=selected_vitamin)
     else:
-        display("Invalid format, please try again")
-        export_data()
-    
-    display("Data successfully exported")
-    dashboard()
-```
+        filtered_data = filtered_data.sort_values(by=selected_vitamin, ascending=False)
+    ```
+  - **On Search:** Searches the database based on filtered results.
+    ```python
+    def on_search(self, event):
+        selected_items = self.m_choice1.GetStringSelection()
+        food_name = self.m_textCtrl7.GetValue().lower()
+        min_value = None
+        max_value = None
+        
+        if self.m_textCtrl5.GetValue():
+            try:
+                min_value = float(self.m_textCtrl5.GetValue())
+            except ValueError:
+                wx.MessageBox("Please enter a valid numeric value for Min.", "Error", wx.OK | wx.ICON_ERROR)
+                return
+        if self.m_textCtrl6.GetValue():
+            try:
+                max_value = float(self.m_textCtrl6.GetValue())
+            except ValueError:
+                wx.MessageBox("Please enter a valid numeric value for Max.", "Error", wx.OK | wx.ICON_ERROR)
+                return
+        
+        if selected_items == "Food":
+            filtered_data = self.dataset[self.dataset['food'].str.lower().str.contains(food_name, na=False)]
+        else:
+            filtered_data = self.dataset[(self.dataset[selected_items].notna()) & (self.dataset['food'].str.lower().str.contains(food_name, na=False))]
+            if min_value is not None:
+                filtered_data = filtered_data[filtered_data[selected_items] >= min_value]
+            if max_value is not None:
+                filtered_data = filtered_data[filtered_data[selected_items] <= max_value]
+        
+        sort_order = self.m_choice_sort.GetStringSelection()
+        if sort_order == "Ascending":
+            filtered_data = filtered_data.sort_values(by=selected_items)
+        else:
+            filtered_data = filtered_data.sort_values(by=selected_items, ascending=False)
 
----
+        level_filter = self.m_choice_level.GetStringSelection()
+        if level_filter != "None":
+            highest_value = filtered_data[selected_items].max() if not filtered_data.empty else 0
 
-#### 3.2.3.9 End Program
-**Pseudocode**:
-```
-function end_program():
-    display("Thank you for using the Nutrition App. Goodbye!")
-    logout_user()
-    exit_program()
-```
+            low_threshold = highest_value * 0.33
+            high_threshold = highest_value * 0.66
 
-## 4. User Interface Design
+            if level_filter == "Low":
+                filtered_data = filtered_data[filtered_data[selected_items] < low_threshold]
+            elif level_filter == "Medium":
+                filtered_data = filtered_data[(filtered_data[selected_items] >= low_threshold) & (filtered_data[selected_items] <= high_threshold)]
+            elif level_filter == "High":
+                filtered_data = filtered_data[filtered_data[selected_items] > high_threshold]
+        
+        self.populate_grid(filtered_data)
+    ```
+### 3.2.2 Nutritional Features
 
-### 4.1 Structural Design
+#### 3.2.2.4 Nutritional Filters
+- **Type**: Dictionary
+- **Usage**: Stores the filters applied to search results, where the keys represent nutrient types (e.g., calories, protein) and the values denote ranges or levels.
 
-![Structural_Hierarchy Design](./Hierarchy.png)
+- **Functions**:
+  - **Apply Filters**: Filters food items in search results based on selected ranges in the filter dictionary.
+  
+    ```python
+    def on_search(self, event):
+        selected_items = self.m_choice1.GetStringSelection()
+        food_name = self.m_textCtrl7.GetValue().lower()
 
-#### 4.1.1 Functions
+        min_value = None
+        max_value = None
 
-**Start Program**: This is where the user begins their interaction with the app. It opens with a login or registration screen to ensure only authenticated users access the system. This prevents unauthorized access to personalized data like saved meal plans or preferences.
+        if self.m_textCtrl5.GetValue():
+            try:
+                min_value = float(self.m_textCtrl5.GetValue())
+            except ValueError:
+                wx.MessageBox("Please enter a valid numeric value for Min.", "Error", wx.OK | wx.ICON_ERROR)
+                return
 
----
+        if self.m_textCtrl6.GetValue():
+            try:
+                max_value = float(self.m_textCtrl6.GetValue())
+            except ValueError:
+                wx.MessageBox("Please enter a valid numeric value for Max.", "Error", wx.OK | wx.ICON_ERROR)
+                return
 
-**Login/Register**:
-- Login: Validates users' credentials, enabling them to access their dashboard.
-- Register: Allows new users to create an account, verified via email, ensuring security and authentication.
+        if selected_items == "Food":
+            filtered_data = self.dataset[self.dataset['food'].str.lower().str.contains(food_name, na=False)]
+        else:
+            filtered_data = self.dataset[(self.dataset[selected_items].notna()) & (self.dataset['food'].str.lower().str.contains(food_name, na=False))]
 
-These design choices ensure each user has a personalized experience based on their preferences and nutritional data.
+            if min_value is not None:
+                filtered_data = filtered_data[filtered_data[selected_items] >= min_value]
+            if max_value is not None:
+                filtered_data = filtered_data[filtered_data[selected_items] <= max_value]
 
----
+        self.populate_grid(filtered_data)
+    ```
 
-**Dashboard**: Once logged in, users are presented with the central navigation hub. From here, they can easily access various modules like food search, filtering options, meal planning, and export tools. The dashboard serves as the command centre for the app, streamlining the user experience and making all features accessible from a single location.
+  - **Clear Filters**: While there is no set code to clear filters, the drop-down menu includes options for 'none' for some of the selections.
 
----
+#### 3.2.2.5 Nutritional Breakdown
+- **Type**: Dictionary
+- **Usage**: Stores detailed nutritional information for a selected food item. The dictionary contains key-value pairs representing nutrients (e.g., calories, fats) and their corresponding amounts.
 
-**Food Search Module**: One of the core features allows users to search for food items to retrieve detailed nutritional information. The system uses a database of food items with nutritional data like calories, fats, proteins, etc. The search function is built to be fast and efficient, allowing users to find specific foods quickly.
+- **Functions**:
+  - **Nutritional Data**: Fetches detailed nutritional data for a food item.
 
----
+    ```python
+    def populate_grid(self, filtered_data):
+        self.m_grid2.ClearGrid()
 
-**Filter Options Module**: Users can apply filters to search results based on their nutritional needs. This is important for those following specific diets or who need to monitor macronutrients like fats or proteins. The app allows customization and flexibility in searching for foods that meet the user's requirements.
+        num_rows = len(filtered_data)
+        num_cols = len(filtered_data.columns)
 
----
+        if num_rows > self.m_grid2.GetNumberRows():
+            self.m_grid2.AppendRows(num_rows - self.m_grid2.GetNumberRows())
+        elif num_rows < self.m_grid2.GetNumberRows():
+            self.m_grid2.DeleteRows(num_rows, self.m_grid2.GetNumberRows() - num_rows)
 
-**Meal Planner Module**: Users can add food items to a meal plan, and the system calculates the total nutritional value of the meal. This module helps users plan balanced meals by providing immediate feedback on the nutritional content, which is essential for those monitoring their intake.
+        if num_cols > self.m_grid2.GetNumberCols():
+            self.m_grid2.AppendCols(num_cols - self.m_grid2.GetNumberCols())
+        elif num_cols < self.m_grid2.GetNumberCols():
+            self.m_grid2.DeleteCols(num_cols, self.m_grid2.GetNumberCols() - num_cols)
 
----
+        for col_idx, col_name in enumerate(filtered_data.columns):
+            self.m_grid2.SetColLabelValue(col_idx, col_name)
 
-**Export/Import Modules**: This feature allows users to export their search results, meal plans, or nutritional data into various formats like CSV, PDF, and Excel. It is helpful for offline access, sharing, or further analysis. The import function allows administrators to upload new nutritional data via CSV files.
+        for row_idx, row_data in enumerate(filtered_data.iterrows()):
+            for col_idx, value in enumerate(row_data[1]):
+                self.m_grid2.SetCellValue(row_idx, col_idx, str(value))
 
----
+        self.m_grid2.Fit()
+        self.Layout()
+    ```
 
-**User and Nutritional Database**: These databases store information like user credentials, preferences, and the nutritional breakdown of food items. The user database handles account management, including registering new users, managing passwords, and editing account details. The nutritional database provides data for search results and meal planning.
+  - **Compare Foods**: While there is no 'compare' option, the foods are listed in a table, and users can see the total nutritional value of selected foods.
 
----
+    ```python
+    def update_totals(self):
+        num_rows = self.grid.GetNumberRows() - 1
+        num_cols = self.grid.GetNumberCols()
 
-**Search and Filtered Foods**: This step allows users to see their search results with applied filters. The filtered results give them more control over their choices, allowing for targeted meal planning and dietary management.
+        totals = [0.0] * num_cols
 
----
+        for row in range(1, num_rows + 1):
+            for col in range(1, num_cols):
+                try:
+                    value = float(self.grid.GetCellValue(row, col))
+                    totals[col] += value
+                except ValueError:
+                    pass
 
-**Account Management Module**: This module allows users to manage their account details, such as email and password. Users can update their information and preferences to reflect dietary needs or personal data changes.
+        for col in range(1, num_cols):
+            self.grid.SetCellValue(self.total_row_index, col, str(round(totals[col], 3)))
 
----
+        for col in range(num_cols):
+            self.grid.SetReadOnly(self.total_row_index, col, True)
+    ```
 
-**Summary of Nutritional Data**: After using the filters or meal planner, users are shown a summary of the total nutritional content. This step is designed to provide clarity and assist users in making informed decisions about their food intake.
+#### 3.2.2.6 CSV Data Source
+- **Type**: CSV File (External Source)
+- **Usage**: Administrators upload CSV files containing nutritional data to be integrated into the system.
 
+- **Functions**:
+  - **upload_csv(file)**: Allows administrators to upload and import CSV files with nutritional data.
+
+    ```python
+    self.dataset = pd.read_csv('Food_Nutrition_Dataset.csv')
+    ```
+
+  - **parse_csv(file)**: Parses the uploaded CSV file and integrates it into the food database, ensuring the correct format. 
+
+    ```python
+    self.m_grid2 = wx.grid.Grid(self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0)
+    self.m_grid2.CreateGrid(0, 9)
+    self.m_grid2.EnableEditing(True)
+    self.m_grid2.EnableGridLines(True)
+    self.m_grid2.SetMargins(0, 0)
+    self.m_grid2.EnableDragColMove(False)
+    self.m_grid2.EnableDragColSize(True)
+    self.m_grid2.SetColLabelAlignment(wx.ALIGN_CENTER, wx.ALIGN_CENTER)
+    self.m_grid2.EnableDragRowSize(True)
+    self.m_grid2.SetRowLabelAlignment(wx.ALIGN_CENTER, wx.ALIGN_CENTER)
+    self.m_grid2.SetDefaultCellAlignment(wx.ALIGN_LEFT, wx.ALIGN_TOP)
+
+    bSizer3.Add(self.m_grid2, 0, wx.ALL, 5)
+    ```
+
+### 4. User Interface Design
+
+#### 4.1 Structural Design
+
+##### Structural Hierarchy Design
+- **Functions**:
+  - **Start Program**: The application starts with an intuitive interface, giving users immediate access to food-related search and nutritional information. Since no login or registration is required, users can directly begin searching for food items, making it easy for anyone to use the app right away.
+  - **Dashboard**: The dashboard acts as the primary navigation hub, offering users quick access to features like food search, filtering, meal planning, and CSV data import (for administrators). All essential functions are readily available in one place, ensuring smooth navigation and efficient use of the application.
+  - **Food Search**: Users can search for food items to view detailed nutritional information from the app’s food database. The search is optimized for speed and efficiency, allowing users to quickly find foods based on criteria such as calories, fats, proteins, and other nutritional details.
+  - **Filter Options**: This module allows users to filter food search results according to specific nutritional needs, such as limiting results to low-fat or high-protein options. These filtering tools provide a customizable experience, helping users tailor their searches to suit personal dietary requirements or preferences.
+  - **Meal Planner**: The meal planner lets users create meal plans by adding selected food items. The app will then calculate the total nutritional value of the meal, helping users balance their intake and make informed decisions about their food choices.
+  - **CSV Data Import**: While users cannot export data, administrators have the ability to import new nutritional datasets via CSV files. These datasets are integrated into the food database, ensuring that the nutritional information remains up-to-date.
+  - **Nutritional Database**: This database stores all the nutritional details for the food items, providing the information displayed during food searches and meal planning. The data is updated via administrator-uploaded CSV files, ensuring accurate and comprehensive information.
+  - **Filter Options**: After performing a search, users can apply filters to refine their results based on their nutritional preferences. The system will display the filtered foods, allowing users to focus on items that meet their dietary goals.
+  - **Grid Population**: After filtering or creating a meal plan, users are presented with a summary of the total nutritional content of their selected items. This information helps users evaluate their choices and ensure that their nutritional intake aligns with their goals.
 
 #### 4.1.2 Navigation & Design Choices
+- **Simplicity**: The app's design prioritizes ease of use, offering a straightforward interface without any complicated login or registration steps. Users can access all key functions—such as food search, filtering, and meal planning—directly from the dashboard. Each module is clearly defined and accessible, ensuring a smooth experience for users as they navigate the app.
 
-**Simplicity**: The design focuses on a user-friendly interface, allowing users to navigate easily through the app. Each module is clearly defined and accessible from the dashboard, ensuring users can quickly find what they need.
+- **Mobile & Desktop Compatibility**: While primarily developed for desktop environments, the app's design ensures it remains accessible and usable across both desktop and mobile devices. The layout is clean and responsive, allowing users to engage with the app's features effortlessly, regardless of the platform they are using.
 
----
+- **Data Visualization**: Although the app does not yet incorporate advanced graphs or charts, the nutritional data is presented clearly in a table format. This table allows users to view and compare food items, filtering by nutritional values such as calories, proteins, and fats. The simplicity of this layout helps users quickly understand and analyze the nutritional content of different food items.
 
-**Mobile & Desktop Compatibility**: The app is designed to work seamlessly on mobile devices and desktop computers, making it accessible to a broad audience. Its simplicity ensures that all users, regardless of their device, can navigate through the app without confusion.
-
----
-
-**Data Visualization**: The information is presented through graphs, charts, and tables, allowing users to choose the format that works best for them. This flexibility in visualization improves user engagement and understanding of nutritional data.
-
-### 4.2	Visual Design
-
-![Visual Design](./Visual_Design_App.png)
-
-
-
+#### 4.2 Visual Design
