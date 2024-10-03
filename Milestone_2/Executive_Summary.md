@@ -73,71 +73,48 @@ Include screenshots for each step demonstrating the use of this feature.
 
 ---
 
-## 3. Min
-### Description  
-The "Min" field allows users to set a minimum threshold value for their search, which relates to the previously selected category from the "Select Carbs/Fats or Vitamins" dropdown. For example, if the user selects "Carbs," the "Min" field specifies the minimum number of carbohydrates they want to query in the database. This feature is helpful for narrowing down search results to food items that meet a specific nutritional criterion, such as caloric value or nutrient content.
+## 3. Min and Max (Range Query)
+### Description
+The "Min" and "Max" fields word together to allow users to set a specific range of values for their search, based on a chosen nutirional category (e.g. Carbs, Fats, Vitatmins). These fields provide a more granular search by letting users define both the minimum and maximum thresholds. This is particularly useful when users want to narrow down results to food items that fall within a certain nutrional range.
+
+This feature is helpful for users who are managing their diet, monitoring specific nutrient intake, or looking for food items within a defined caloric or nutrient range.
 
 ### Steps
-1. Locate the "Min" text box: Find the text box labeled "Min" near the dropdown for "Select Carbs/Fats or Vitamins."
-
-2. Enter a minimum value: Click inside the text box and type the minimum value you'd like to query. This could be a caloric value, amount of carbohydrates, fats, or            vitamins. For example:
+1. Locate the "Min" and "Max" text boxes: Find the text boxes labeled "Min" and "Max" near the dropdown for "Select Carbs/Fats or Vitamins."
+2. Select a category from the dropdown: Choose the nutrient type you want to search for, such as "Carbs," "Fats," or "Vitamins."
+3. Enter a minimum value: Click inside the text box and type the minimum value you'd like to query. This could be a caloric value, amount of carbohydrates, fats, or vitamins. For example:
 
    1. Carbs: Enter "10" to search for foods with at least 10 grams of carbohydrates.
    2. Fats: Enter "5" to search for foods with a minimum of 5 grams of fat.
    3. Vitamins: Enter "100" to search for foods with at least 100 mg of a specific vitamin.
-      
-3. Submit or proceed with the search: After entering the minimum value, either click the Search button (if available) or continue with the next filter/step if the system       supports further refinement.
 
-**Example Scenarios**
-1. If a user is looking for foods high in fats, they could select "Fats" from the dropdown and input "20" in the "Min" field. The search results will then show only foods      with 20 grams or more of fats.
-2. If searching for vitamin-rich foods, the user could select "Vitamins" from the dropdown, enter a specific value (e.g., "50" mg) in the "Min" field, and the system will      display foods with at least that amount of vitamins.
+4. Enter a maximum value in the Max field: Type the maximum value you'd like to query (e.g., "50" for carbs or "20" for fats).
+5. Submit or proceed with the search: After entering the Min and Max values, click the "Search" button (if available) or continue to the next step if adding more filters.
 
-**Additional Features**
+### Example Scenarios
+1. If a user wants to find foods with a moderate amount of carbohydrates, they can set "Carbs" as the category, "10" in the Min field, and "50" in the Max field. The results will show foods containing between 10 and 50 grams of carbs.
+2. If searching for low-fat options, the user might select "Fats" from the dropdown and set the range between "5" and "20" grams.
+
+### Additional Features
 1. Error Handling: If a user enters an invalid value (e.g., negative numbers or non-numeric characters), the system may prompt the user to correct the input.
 2. Range Queries: In some systems, a "Max" field may also be available, allowing the user to specify both minimum and maximum values for a more precise search.
-
-### Screenshots
+3. Validation: The system should validate the user input to ensure that the "Max" value is greater than the "Min" value, and that no invalid characters are entered.
+4. Dynamic Updates: Once the user enters the "Max" value, the search results could automatically update to reflect the refined search based on the new parameters.
+   
+### Min Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
 ![Min 1.png](Min%201.png)
 
 ![Min 2.png](Min%202.png)
 
-
----
-
-## 4. Max
-### Description  
-The "Max" field allows users to set a maximum threshold value for their search, which complements the prior selection made in the "Select Carbs/Fats or Vitamins" dropdown. This field specifies the upper limit of a nutritional component (e.g., carbohydrates, fats, or vitamins) or caloric value that the user is searching for. By entering a maximum value, the user can refine their search to include only food items that do not exceed the specified amount of the chosen nutrient or caloric content.
-
-This feature is helpful for users who are managing their diet, monitoring specific nutrient intake, or looking for food items within a defined caloric or nutrient range.
-
-### Steps
-1. Locate the "Max" text box: Find the text box labeled "Max" next to the dropdown for "Select Carbs/Fats or Vitamins."
-2. Enter a maximum value: Click inside the text box and type in the maximum value for the category you have selected. For example:
-   1. Carbs: Enter "50" to search for foods containing no more than 50 grams of carbohydrates.
-   2. Fats: Enter "30" to filter for foods with a maximum of 30 grams of fat.
-   3. Vitamins: Enter "500" to search for foods that contain no more than 500 mg of a specific vitamin.
-3. Submit or proceed with the search: After entering the maximum value, click the "Search" button (if available) or move to the next step if you are adding more criteria.
-
-**Example Scenarios**
-1. A user might want to find foods that are low in carbohydrates. In this case, they would select "Carbs" from the dropdown, enter "50" in the "Max" field, and the results     would only display foods with 50 grams or fewer carbohydrates.
-2. To limit fat intake, a user might enter "20" in the "Max" field for Fats, filtering out foods that exceed 20 grams of fat.
-
-**Additional Features**
-1. Min and Max Combination: This feature often works together with the "Min" field to allow users to define a range of values for more precise filtering. For example,          entering "10" in the "Min" field and "50" in the "Max" field would search for foods with between 10 and 50 grams of carbs.
-2. Validation: The system should validate the user input to ensure that the "Max" value is greater than the "Min" value, and that no invalid characters are entered.
-3. Dynamic Updates: Once the user enters the "Max" value, the search results could automatically update to reflect the refined search based on the new parameters.
-
-### Screenshots
+### Max Screenshots
 Include screenshots for each step demonstrating the use of this feature.    
 ![Max 1.png](Max%201.png)
 
 ![Max 2.png](Max%202.png)
 
-
 ---
-
-## 5. Sort Order
+## 4. Sort Order
 ### Description
 The "Sort Order" feature allows users to organize their search results either in ascending or descending order, based on the selected nutritional category (e.g., Carbs, Fats, Vitamins, or Caloric Value). This function helps users quickly view food items in their preferred order, such as from lowest to highest carb content or from highest to lowest caloric value.
 
@@ -170,7 +147,7 @@ The "Sort Order" feature allows users to organize their search results either in
 
 ---
 
-## 6. Search
+## 5. Search
 ### Description  
 The "Search" feature is the final step that executes all the previous selections and inputs (from steps 1 to 4). Once the user has specified their search criteria—such as selecting a nutritional category, entering minimum and maximum values, and choosing a sort order—they can click the "Search" button to initiate the query. The system will then process the inputs and return the filtered and sorted results from the database, showing the relevant food items that match the user’s specifications.
 
