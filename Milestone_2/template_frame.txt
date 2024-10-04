@@ -173,3 +173,5 @@ class FoodDetails ( wx.Frame ):
 
     def __del__( self ):
         pass
+
+

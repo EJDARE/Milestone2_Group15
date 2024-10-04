@@ -187,7 +187,7 @@ class MainFrame(wx.Frame):
         self.m_grid2.Bind(wx.grid.EVT_GRID_CELL_LEFT_CLICK, self.on_row_click)
 
     def on_search(self, event):
-        selected_vitamin = self.m_choice1.GetStringSelection()
+        selected_items = self.m_choice1.GetStringSelection()
         food_name = self.m_textCtrl7.GetValue().lower()
 
         min_value = None
@@ -207,35 +207,35 @@ class MainFrame(wx.Frame):
                 wx.MessageBox("Please enter a valid numeric value for Max.", "Error", wx.OK | wx.ICON_ERROR)
                 return
 
-        if selected_vitamin == "Food":
+        if selected_items == "Food":
             filtered_data = self.dataset[self.dataset['food'].str.lower().str.contains(food_name, na=False)]
         else:
-            filtered_data = self.dataset[(self.dataset[selected_vitamin].notna()) & (self.dataset['food'].str.lower().str.contains(food_name, na=False))]
+            filtered_data = self.dataset[(self.dataset[selected_items].notna()) & (self.dataset['food'].str.lower().str.contains(food_name, na=False))]
 
             if min_value is not None:
-                filtered_data = filtered_data[filtered_data[selected_vitamin] >= min_value]
+                filtered_data = filtered_data[filtered_data[selected_items] >= min_value]
             if max_value is not None:
-                filtered_data = filtered_data[filtered_data[selected_vitamin] <= max_value]
+                filtered_data = filtered_data[filtered_data[selected_items] <= max_value]
 
         sort_order = self.m_choice_sort.GetStringSelection()
         if sort_order == "Ascending":
-            filtered_data = filtered_data.sort_values(by=selected_vitamin)
+            filtered_data = filtered_data.sort_values(by=selected_items)
         else:
-            filtered_data = filtered_data.sort_values(by=selected_vitamin, ascending=False)
+            filtered_data = filtered_data.sort_values(by=selected_items, ascending=False)
 
         level_filter = self.m_choice_level.GetStringSelection()
         if level_filter != "None":
-            highest_value = filtered_data[selected_vitamin].max() if not filtered_data.empty else 0
+            highest_value = filtered_data[selected_items].max() if not filtered_data.empty else 0
 
             low_threshold = highest_value * 0.33
             high_threshold = highest_value * 0.66
 
             if level_filter == "Low":
-                filtered_data = filtered_data[filtered_data[selected_vitamin] < low_threshold]
+                filtered_data = filtered_data[filtered_data[selected_items] < low_threshold]
             elif level_filter == "Medium":
-                filtered_data = filtered_data[(filtered_data[selected_vitamin] >= low_threshold) & (filtered_data[selected_vitamin] <= high_threshold)]
+                filtered_data = filtered_data[(filtered_data[selected_items] >= low_threshold) & (filtered_data[selected_items] <= high_threshold)]
             elif level_filter == "High":
-                filtered_data = filtered_data[filtered_data[selected_vitamin] > high_threshold]
+                filtered_data = filtered_data[filtered_data[selected_items] > high_threshold]
 
         self.result_count_text.SetLabel(f"Results found: {len(filtered_data)}")
 
