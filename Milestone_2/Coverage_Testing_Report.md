@@ -83,3 +83,11 @@ pytest --cov=all_functions --cov-branch --cov-report=term
 Note: In the command above, the file/module `all_functions` does not include the .py extension. all_functions.py should contain all the tested functions related to the five required features.
 
 ![Branch Coverage Test.png](Branch%20Coverage%20Test.png)
+
+In this image, the pytest command was ran with --cov-branch added, which checks branch coverage in addition to statement coverage.
+
+Here’s an analysis of the updated output:
+
+- Branch Coverage: Branch coverage is now being reported, with core_functions.py showing 3 branches missed, resulting in a 91% coverage rate.
+- Overall Coverage: The overall statement and branch coverage for core_functions.py is at 91%, with 27 statements, 1 missed statement, and 3 missed branches.
+- Execution Time: The tests completed in 2.51 seconds, with all three tests passing successfully.
