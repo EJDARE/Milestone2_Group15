@@ -207,7 +207,7 @@ Use Case diagrams are graphical representations of the interactions between user
 ### 3.1 Software Design
 
 #### Software Design Flowchart
-(Include a flowchart illustrating the software design process here)
+![Flowchart](./Flowchart.png)
 
 ### 3.2 System Components
 
@@ -546,6 +546,8 @@ Once users have completed their tasks, they can close the app without needing to
 
 #### 4.1 Structural Design
 
+![Hierarchy](./Hierarchy.png)
+
 ##### Structural Hierarchy Design
 - **Functions**:
   - **Start Program**: The application starts with an intuitive interface, giving users immediate access to food-related search and nutritional information. Since no login or registration is required, users can directly begin searching for food items, making it easy for anyone to use the app right away.
@@ -566,3 +568,14 @@ Once users have completed their tasks, they can close the app without needing to
 - **Data Visualization**: Although the app does not yet incorporate advanced graphs or charts, the nutritional data is presented clearly in a table format. This table allows users to view and compare food items, filtering by nutritional values such as calories, proteins, and fats. The simplicity of this layout helps users quickly understand and analyze the nutritional content of different food items.
 
 #### 4.2 Visual Design
+
+### 4.2.1 App Startup
+![App Startup](./Start_up.png)
+### 4.2.2 Nutritional Dropdown Options
+![Nutritional Drowpdown Options](./Drop_Down_Options.png)
+### 4.2.3 Filtered Search Results
+![Filtered Search](./Filtered_App.png)
+### 4.2.4 Meal Planner
+![Meal Planner](./Meal_Planner.png)
+
+Note: Meal Planner is opened in a separate window, so both the Meal Planner and Database are visible at the same time.
