@@ -49,6 +49,15 @@ Note: In the command above, the file/module `all_functions` does not include the
 
 ![Statement Coverage Test.png](Statement%20Coverage%20Test.png)
 
+The image provided shows the results of running tests with pytest on a file named core_functions.py using the --cov option for code coverage.
+
+Here’s a breakdown of the output:
+
+Tests Summary: All three tests in test_all_functions.py passed.
+Coverage: core_functions.py has 27 statements, with 1 missed, resulting in a 96% coverage rate.
+Execution Time: The tests took 2.53 seconds to complete.
+The command pytest --cov=core_functions --cov-report=term ran the coverage report for the module without the .py extension, following the expected format.
+
 ## 3. **Branch Coverage Test**
 
 ### 3.1 Description
