@@ -122,7 +122,7 @@ The Work Breakdown Structure (WBS) outlines all major tasks and subtasks require
 
 The Gantt Chart provides a visual timeline of the project, illustrating the start and end dates for each activity and highlighting dependencies between tasks. This helps ensure that tasks are completed in the correct order and on time.
 
-(![image](https://github.com/user-attachments/assets/282828db-9513-4d03-ac16-885877f3856a)
+![image](https://github.com/user-attachments/assets/282828db-9513-4d03-ac16-885877f3856a)
 
 ## 5. Food Nutrition Dataset
 
