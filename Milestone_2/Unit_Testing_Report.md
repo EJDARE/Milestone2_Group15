@@ -1,7 +1,7 @@
 # Unit Testing Report
 
 Please provide your GitHub repository link.
-### GitHub Repository URL: https://github.com/XXXX/XXXXX.git
+### GitHub Repository URL: https://github.com/EJDARE/Milestone2_Group15.git
 
 ---
 
@@ -220,4 +220,4 @@ pytest test_all_functions.py --html=unit_test.html --self-contained-html
 Note: test_all_functions.py should contain all the test functions designed to test the self-defined functions related 
 to the five required features.
 
-![unit_test_summary](./Unit_test.png)
+![Unit_test_all_functions.png](Unit_test_all_functions.png)
