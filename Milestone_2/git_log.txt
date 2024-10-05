@@ -1,0 +1,41 @@
+* facf889 2024-10-04 by [EJDARE] | Unit Testing and Coverage stuff (HEAD -> main, origin/main, origin/HEAD)
+* 639891e 2024-10-04 by [EJDARE] | Update Executive_Summary.md
+* b6b2da7 2024-10-03 by [SFAtomic] | Update Software Design Document.md
+* 9503852 2024-10-01 by [SFAtomic] | Update Software Design Document.md
+* 0741d95 2024-10-01 by [Ethan Baker] | Update Project Plan.md
+* 172afd6 2024-10-01 by [Ethan Baker] | Update Project Plan.md
+* 96a887d 2024-10-01 by [Ethan Baker] | Update Project Plan.md
+* b3dfd8f 2024-10-01 by [Ethan Baker] | Update Project Plan.md
+* 250f0a4 2024-10-01 by [Ethan Baker] | Update Project Plan.md
+* b4bfa01 2024-10-01 by [Ethan Baker] | Update Project Plan.md
+* 1b8bcd4 2024-10-01 by [Ethan Baker] | Update Project Plan.md
+* 01fa210 2024-10-01 by [Ethan Baker] | Add files via upload
+* 3d9c642 2024-10-01 by [Ethan Baker] | Update Project Plan.md
+* 67fd7d1 2024-10-01 by [Ethan Baker] | Add files via upload
+* 95045fd 2024-10-01 by [Ethan Baker] | Add files via upload
+* 0ede6a3 2024-10-01 by [Ethan Baker] | Update Project Plan.md
+* 09465b1 2024-10-01 by [Ethan Baker] | Add files via upload
+* 29dd586 2024-10-01 by [Ethan Baker] | Update Project Plan.md
+* 445e1b7 2024-10-01 by [Ethan Baker] | Add files via upload
+* 84d5eb4 2024-10-01 by [Ethan Baker] | Add files via upload
+* 1a3c98f 2024-10-01 by [Ethan Baker] | Delete GUI.fbp
+* 545ca8e 2024-10-01 by [Ethan Baker] | Add files via upload
+* f9d5248 2024-09-30 by [Ethan Baker] | Update Coverage_Testing_Report.md
+* 355daf6 2024-09-30 by [Ethan Baker] | Update Unit_Testing_Report.md
+* 90d3daa 2024-09-30 by [Ethan Baker] | Update Unit_Testing_Report.md
+* 9aa24b6 2024-09-30 by [Ethan Baker] | Update Unit_Testing_Report.md
+* c12dba6 2024-09-29 by [SFAtomic] | Added Milestone 1 Software Design Document
+* e8baa0b 2024-09-27 by [Ethan Baker] | Update Executive_Summary.md
+* b93b621 2024-09-27 by [Ethan Baker] | Update Executive_Summary.md
+* fed9450 2024-09-27 by [Ethan Baker] | Update Executive_Summary.md
+* e8a5588 2024-09-27 by [Ethan Baker] | Update Executive_Summary.md
+* 41cfaad 2024-09-27 by [Ethan Baker] | Update Executive_Summary.md
+* db04225 2024-09-27 by [Ethan Baker] | Update Executive_Summary.md
+* e721272 2024-09-27 by [Ethan Baker] | Update Executive_Summary.md
+* dc89cd2 2024-09-26 by [EJDARE] | Screenshots Added
+* b973a8f 2024-09-26 by [EJDARE] | Update Executive_Summary.md
+* 6e8c3de 2024-09-25 by [EJDARE] | Update Executive_Summary.md
+* cd85733 2024-09-25 by [EJDARE] | Update Executive_Summary.md
+* 94fbfdd 2024-09-18 by [EJDARE] | Initial Commit
+* c79bc83 2024-09-18 by [EJDARE] | Create README.md
+* 1ad7c30 2024-09-18 by [EJDARE] | Add files via upload
