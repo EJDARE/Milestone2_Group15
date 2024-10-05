@@ -40,7 +40,6 @@ those functions, for example:
 |-------------------------------|---------------------|
 | `divide(10, 2)`               | `5`                 |
 | `divide(10, -2)`              | `-5`                |
-| `add more cases in necessary` | `...`               |
 
 - **1) Code for the Test Function**
 ```python
@@ -76,7 +75,6 @@ def test_divide_invalid():
 |-------------------------------|---------------------|
 | `add(3, 2)`                   | `5`                 |
 | `add(-1, 1)`                  | `-5`                |
-| `add more cases in necessary` | `...`               |
 
 - **1) Code for the Test Function**
 ```python
@@ -89,7 +87,6 @@ def test_add_valid():
 | **Invalid Input**             | **Expected Output** |
 |-------------------------------|---------------------|
 | `add(3, "two")`               | `Handle TypeError`  |
-| `add more cases in necessary` | `...`               |
 
 - **2) Code for the Test Function**
 ```python
@@ -112,7 +109,6 @@ def test_add_invalid():
 |-------------------------------|---------------------|
 | `multiply(2, 3)`              | `6`                 |
 | `multiply(-2, 3)`             | `-6`                |
-| `add more cases in necessary` | `...`               |
 
 - **1) Code for the Test Function**
 ```python
@@ -125,7 +121,6 @@ def test_multiply_valid():
 | **Invalid Input**             | **Expected Output** |
 |-------------------------------|---------------------|
 | `multiply(2, None)`           | `Handle TypeError`  |
-| `add more cases in necessary` | `...`               |
 
 - **2) Code for the Test Function**
 ```python
@@ -148,7 +143,6 @@ def test_multiply_invalid():
 |-------------------------------|---------------------|
 | `subtract(5, 3)`              | `2`                 |
 | `subtract(-2, -3)`            | `1`                 |
-| `add more cases in necessary` | `...`               |
 
 - **1) Code for the Test Function**
 ```python
@@ -161,7 +155,6 @@ def test_subtract_valid():
 | **Invalid Input**             | **Expected Output** |
 |-------------------------------|---------------------|
 | `subtract(5, None)`           | `Handle TypeError`  |
-| `add more cases in necessary` | `...`               |
 
 - **2) Code for the Test Function**
 ```python
@@ -184,7 +177,6 @@ def test_subtract_invalid():
 | **Valid Input**                  | **Expected Output** |
 |----------------------------------|---------------------|
 | `process_data({'a': 1, 'b': 2})` | `[1, 2]`            |
-| `add more cases in necessary`    | `...`               |
 
 - **1) Code for the Test Function**
 ```python
@@ -196,7 +188,6 @@ def test_process_data_valid():
 | **Invalid Input**             | **Expected Output** |
 |-------------------------------|---------------------|
 | `process_data(None)`          | `Handle ValueError` |
-| `add more cases in necessary` | `...`               |
 
 - **2) Code for the Test Function**
 ```python
