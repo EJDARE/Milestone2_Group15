@@ -52,7 +52,6 @@ def test_divide_valid():
 | **Invalid Input**             | **Expected Output** |
 |-------------------------------|---------------------|
 | `divide(10, 0)`               | `Handle Exception`  |
-| `add more cases in necessary` | `...`               |
 
 - **2) Code for the Test Function**
 ```python
