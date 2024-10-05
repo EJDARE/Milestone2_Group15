@@ -34,6 +34,9 @@
   * [2. Work Breakdown Structure](#2-work-breakdown-structure)
   * [3. Activity Definition Estimation](#3-activity-definition-estimation)
   * [4. Gantt Chart](#4-gantt-chart)
+  * [5. Food Nutrition Dataset](#5-food-nutrition-dataset)
+  * [6. Risk Management](#6-risk-management)
+  * [7. Success Criteria](#7-success-criteria)
 
 
 <div style="page-break-after: always;"></div>
