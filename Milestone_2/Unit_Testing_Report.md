@@ -195,10 +195,6 @@ def test_process_data_invalid():
         process_data(None)
 ```
 
-### Test Case 6:
-
-add more test cases if necessary.
-
 ## 3. **Testing Report Summary**
 Include a screenshot of unit_test.html showing the results of all the above tests. 
 
