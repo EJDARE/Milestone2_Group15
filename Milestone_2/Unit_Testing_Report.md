@@ -211,4 +211,5 @@ pytest test_all_functions.py --html=unit_test.html --self-contained-html
 Note: test_all_functions.py should contain all the test functions designed to test the self-defined functions related 
 to the five required features.
 
-![Unit_test_all_functions.png](Unit_test_all_functions.png)
+![image](https://github.com/user-attachments/assets/abb9f43f-9b5d-4306-84c2-ba1ac4bfec0e)
+
