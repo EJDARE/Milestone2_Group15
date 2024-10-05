@@ -59,6 +59,71 @@ Here’s a breakdown of the output:
 
 The command pytest --cov=core_functions --cov-report=term ran the coverage report for the module without the .py extension, following the expected format.
 
+# test_all_functions.py
+
+import pytest
+import pandas as pd
+from core_functions import filter_data, sort_data, level_filter_data
+
+# Sample dataset to use in tests
+data = {
+    'food': ['Apple', 'Banana', 'Carrot', 'Apple Pie'],
+    'Vitamin A': [50, 30, 90, 10],
+    'Caloric Value': [100, 150, 200, 300]
+}
+dataset = pd.DataFrame(data)
+
+def test_filter_data():
+    # Test filtering by food name
+    filtered = filter_data(dataset, 'Food', 'apple')
+    assert len(filtered) == 2
+
+    # Test filtering by vitamin
+    filtered = filter_data(dataset, 'Vitamin A', 'banana', min_value=20, max_value=50)
+    assert len(filtered) == 1
+
+def test_sort_data():
+    # Test ascending sort
+    filtered = filter_data(dataset, 'Vitamin A', 'apple')
+    sorted_data = sort_data(filtered, 'Vitamin A', 'Ascending')
+    print(sorted_data)  # Debugging line
+    assert sorted_data.iloc[0]['Vitamin A'] == 10  # Expected minimum
+
+    # Test descending sort
+    sorted_data = sort_data(filtered, 'Vitamin A', 'Descending')
+    print(sorted_data)  # Debugging line
+    assert sorted_data.iloc[0]['Vitamin A'] == 50  # Expected maximum
+
+
+def test_level_filter_data():
+    # Test Low level filter
+    filtered = filter_data(dataset, 'Vitamin A', 'apple')
+    level_filtered = level_filter_data(filtered, 'Vitamin A', 'Low')
+    assert len(level_filtered) == 1
+
+    # Test High level filter
+    level_filtered = level_filter_data(filtered, 'Vitamin A', 'High')
+    assert len(level_filtered) == 1
+
+# Command to run: pytest --cov=core_functions --cov-report=term
+
+Below is a brief review and some suggestions for improvement or clarification:
+
+Review:
+
+1. Dataset Definition:
+    - The test dataset is simple but effectively captures different foods with varying values for "Vitamin A" and "Caloric Value." This allows for meaningful filtering and        sorting tests.
+2. Test for filter_data Function:
+    - You're testing filtering both by food and Vitamin A successfully, with min_value and max_value checks.
+    - The test ensures correct behavior when filtering by food names and specific value ranges for vitamins, which is crucial for handling user queries.
+3. Test for sort_data Function:
+    - Sorting is tested for both ascending and descending orders.
+    - The use of debugging prints (print(sorted_data)) can be helpful during development, but you may want to remove them for the final version.
+    - Assertions are checking that the first element is either the minimum or maximum, depending on the sort order, which is a good validation step.
+4. Test for level_filter_data Function:
+    - The test checks for both "Low" and "High" level filters.
+    - It asserts that the number of items in the filtered dataset matches the expected value, which verifies that the level filtering works as intended.
+
 ## 3. **Branch Coverage Test**
 
 ### 3.1 Description
