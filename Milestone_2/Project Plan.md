@@ -117,6 +117,9 @@ The Work Breakdown Structure (WBS) outlines all major tasks and subtasks require
 | 9 | Integration testing | Conduct integration testing to ensure component compatibility | 16 | Project Team |cd 
 | 10 | Develop user manual | Create user documentation for the application | 22 | Project Team, Customers/Clients |
 | 11 | Develop project report | Prepare and finalize the project report for stakeholders | 28 | Project Manager, Project Team, Customers/Clients |
+| 12 | Statement Coverage Testing | Design test cases that cover every possible execution path in the code | 3 | Project Manager, Project Team |
+| 13 | Branch Coverage Testing | Test all possible paths within the decision points of the code, such as if-else conditions | 3 | Project Manager, Project Team |
+| 14 | Testing Report Preparation | Document the testing process and results for both statement and branch coverage tests | 5 | Project Manager, Project Team |
 
 ## 4. Gantt Chart
 
